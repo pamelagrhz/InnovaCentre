@@ -12,10 +12,12 @@ export default function NavBar() {
             <Nav.Link href="mailto:contacto@innovacentre.com.mx">Contactanos</Nav.Link>
           </Nav>
           <Form inline>
-            <Nav.Link href="/signout">Registrarse</Nav.Link>
-            <Nav.Link href="/signin">/ Iniciar sesión</Nav.Link>
+
             <FormControl type="text" placeholder="Buscar" className="mr-sm-2" />
             <Button variant="outline-light">Buscar</Button>
+            <Nav.Link href="/signout">Registrarse</Nav.Link>
+            <Nav.Link href="/signin">/ Iniciar sesión</Nav.Link>
+
           </Form>
         </Navbar>
         <br />
