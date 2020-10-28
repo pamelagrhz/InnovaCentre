@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Form, Button } from 'react-bootstrap';
+import { Card, Form, Button, Nav } from 'react-bootstrap';
 
 export default function SignIn() {
   return (
@@ -18,6 +18,8 @@ export default function SignIn() {
               <Form.Control type="password" placeholder="Password" />
             </Form.Group>
             <Form.Group controlId="formCheckbox">
+              <Nav.Link className="linkButton" href="/signout">Aun no tengo una cuenta.</Nav.Link>
+              <Nav.Link className="linkButton" href="#">Olvidé mi contraseña.</Nav.Link>
               <Form.Check type="checkbox" label="Recuerdame" />
             </Form.Group>
             <Button variant="primary" type="submit" size="lg" block>
@@ -26,6 +28,9 @@ export default function SignIn() {
           </Form>
         </Card.Body>
       </Card>
+
+
+
     </div >
   )
 }

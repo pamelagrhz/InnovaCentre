@@ -1,5 +1,6 @@
 import React from 'react';
-import { Form, Card, Col, Button, InputGroup, FormControl, Row } from 'react-bootstrap';
+import { Form, Card, Col, Button, InputGroup, FormControl, Row, Nav } from 'react-bootstrap';
+
 export default function SignOut() {
 
   return (
@@ -28,7 +29,7 @@ export default function SignOut() {
               <InputGroup.Prepend>
                 <InputGroup.Text id="basic-addon1">@</InputGroup.Text>
               </InputGroup.Prepend >
-              <FormControl size="sm" block
+              <FormControl
                 placeholder="Username"
                 aria-label="Username"
                 aria-describedby="basic-addon1"
@@ -92,6 +93,18 @@ export default function SignOut() {
                 <Form.Control type="number" placeholder="55-00-00-00-00" />
               </Col>
             </Form.Group>
+            {/* Estudia? */}
+            <Form.Group as={Row} className="mb-3" controlId="formStudy">
+              <Form.Label column sm={5} >Te encuentras estudiando?</Form.Label>
+              <Col sm={7}>
+                <Form.Control as="select" defaultValue="Seleccionar...">
+                  <option>Si</option>
+                  <option>No</option>
+                </Form.Control>
+              </Col>
+
+            </Form.Group>
+
             {/* nivel */}
             <Form.Group as={Row} className="mb-3" controlId="formGridLevel">
               <Form.Label column sm={2} >Nivel</Form.Label>
@@ -123,6 +136,8 @@ export default function SignOut() {
               </Form.Group>
 
             </Form.Row>
+            <Nav.Link className="linkButton" href="/signin">Ya tengo una cuenta.</Nav.Link>
+
             {/* Checkbox */}
             <Form.Group id="formGridCheckbox">
               <Form.Check type="checkbox" label="Recordarme" />

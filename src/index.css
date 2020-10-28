@@ -22,14 +22,28 @@ a {
     text-decoration: none;
 }
 
-element {
-    --principal: #62297A!important;
-    --yellow: #F49A31!important;
+.logo {
+    background-color: #fff;
 }
 
 .card {
     margin: 0 auto;
-    width: 600px;
+    width: 600px!important;
+}
+
+.card-image-details {
+    width: 80%;
+    height: 80%;
+}
+
+.card-image {
+    width: 50%;
+    height: 50%;
+}
+
+.circle-image {
+    width: 15rem;
+    height: 15rem;
 }
 
 .footer {
@@ -37,6 +51,10 @@ element {
     width: 100%!important;
     margin-top: 3em;
     color: white;
+}
+
+.footer a {
+    font-size: 1.6em;
 }
 
 
@@ -52,11 +70,57 @@ element {
     background-color: var(--principal)!important;
 }
 
+.linkButton {
+    color: var(--principal);
+}
+
+.gray {
+    background-color: var(--yellow);
+}
+
+.space-around {
+    display: flex;
+    justify-content: space-around;
+}
+
+.mini-card {
+    width: 100%;
+    margin: 10px;
+}
+
+.miniEventos {
+    display: flex;
+    flex-direction: row;
+}
+
+.contact-icons {
+    margin: 0 30%;
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.contact-icons a {
+    margin: 0 5px;
+}
+
 
 /* Responsive */
 
 @media only screen and (max-width: 620px) {
     .card {
         width: 90%;
+    }
+    .mini-card {
+        width: auto;
+        flex-direction: row;
+    }
+    .mini-card img {
+        width: 40%;
+        height: auto;
+    }
+    .miniEventos {
+        flex-direction: column;
     }
 }
