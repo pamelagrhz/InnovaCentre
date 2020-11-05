@@ -53,6 +53,7 @@ export default function SignOut() {
               <Form.Group as={Col} controlId="formGridPassword">
                 <Form.Label>Contraseña</Form.Label>
                 <Form.Control type="password" placeholder="Password" />
+
               </Form.Group>
 
               <Form.Group as={Col} controlId="formGridConfirmPassword">
@@ -60,7 +61,10 @@ export default function SignOut() {
                 <Form.Control type="password" placeholder="Password" />
               </Form.Group>
             </Form.Row>
-
+            <Form.Text id="passwordHelpBlock" muted>
+              Your password must be 8-20 characters long, contain letters and numbers, and
+              must not contain spaces, special characters, or emoji.
+            </Form.Text>
             <Form.Row>
 
               {/* Nacimiento */}

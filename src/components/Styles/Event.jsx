@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { Modal, Card, Image, Badge, Button, Accordion } from 'react-bootstrap';
+import { Modal, Card, Image, Badge, Button, CardColumns } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import defaultEvent from './../../Assets/img/defaultEvent.jpg';
 import maps from './../../Assets/img/maps.png';
+import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup'
 
 export default function Event() {
   const [show, setShow] = useState(false);
@@ -21,6 +22,7 @@ export default function Event() {
     <div>
       <h1>Eventos</h1>
       <div className="miniEventos">
+
         <Card className="leftcard mini-card">
           <Card.Img variant="top" src={defaultEvent} />
           <Card.Body>
@@ -66,8 +68,20 @@ export default function Event() {
             <Card.Link className="linkButton" href="#" onClick={handleShow}>Ver más</Card.Link>
           </Card.Body>
         </Card>
-
-
+      </div>
+      <div>
+        <Card className="leftcard ">
+          <Card.Img variant="top" src={defaultEvent} />
+          <Card.Body>
+            <Card.Title>Mier 3 Oct  12:30hr</Card.Title>
+            <Card.Title>Nickname</Card.Title>
+            <Card.Subtitle className="mb-2 text-muted">Nombre del organizador</Card.Subtitle>
+            <Card.Text>
+              <h4>Nombre del evento</h4>
+            </Card.Text>
+            <Card.Link className="linkButton" href="#" onClick={handleShow}>Editar</Card.Link>
+          </Card.Body>
+        </Card>
       </div>
 
       {/* Modelo a mostrar */}

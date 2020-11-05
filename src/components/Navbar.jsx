@@ -17,6 +17,7 @@ export default function NavBar() {
             <NavDropdown.Item href="/signout">Registrarse</NavDropdown.Item>
             <NavDropdown.Item href="/signin">Iniciar sesión</NavDropdown.Item>
             <NavDropdown.Item href="/event">Eventos</NavDropdown.Item>
+            <NavDropdown.Item href="/eventadd">Eventos</NavDropdown.Item>
             <NavDropdown.Divider />
             <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
           </NavDropdown>

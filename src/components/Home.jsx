@@ -3,7 +3,7 @@ import { Button, Jumbotron, Carousel } from 'react-bootstrap';
 import maps from '../Assets/img/image.jpg';
 import img1 from '../Assets/img/conf.jpg';
 import img2 from '../Assets/img/defaultEvent.jpg';
-
+import Perfil from './User/Perfil'
 
 
 export default function Home() {
@@ -61,6 +61,7 @@ export default function Home() {
           <Button variant="primary" href="/event">Ver eventos</Button>
         </p>
       </Jumbotron>
+      <Perfil />
     </div >
   )
 }

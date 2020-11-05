@@ -5,6 +5,7 @@ import SignIn from './components/User/SignIn';
 import SignOut from './components/User/SignOut'
 import Footer from './components/Footer';
 import Event from './components/Styles/Event'
+import EventAdd from './components/Events/EventAdd'
 import Home from './components/Home';
 import './App.css';
 
@@ -26,6 +27,9 @@ function App() {
             </Route>
             <Route path="/event">
               <Event />
+            </Route>
+            <Route path="/eventadd">
+              <EventAdd />
             </Route>
           </Switch>
         </Router >

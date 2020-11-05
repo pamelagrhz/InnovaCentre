@@ -1,5 +1,5 @@
 :root {
-    --principal: #62297A;
+    --principal: #0c246c;
 }
 
 body {
@@ -22,9 +22,7 @@ a {
     text-decoration: none;
 }
 
-.logo {
-    background-color: #fff;
-}
+.logo {}
 
 .card {
     margin: 0 auto;
@@ -84,7 +82,7 @@ a {
 }
 
 .mini-card {
-    width: 100%;
+    width: 300px!important;
     margin: 10px;
 }
 
@@ -110,10 +108,9 @@ a {
 
 @media only screen and (max-width: 620px) {
     .card {
-        width: 90%;
+        width: 90%!important;
     }
     .mini-card {
-        width: auto;
         flex-direction: row;
     }
     .mini-card img {

@@ -16,6 +16,7 @@ export default function SignIn() {
             <Form.Group controlId="formPassword">
               <Form.Label>Contraseña</Form.Label>
               <Form.Control type="password" placeholder="Password" />
+
             </Form.Group>
             <Form.Group controlId="formCheckbox">
               <Nav.Link className="linkButton" href="/signout">Aun no tengo una cuenta.</Nav.Link>
