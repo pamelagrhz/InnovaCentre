@@ -17,6 +17,10 @@ export default function Footer() {
         <a href="https://www.youtube.com/channel/UCC9WkXQZaImSIGTe0IyupOQ" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faYoutube} /></a>
         <a href="mailto:contacto@innovacentre.com.mx"><FontAwesomeIcon icon={faMailBulk} /></a>
       </div>
+      <br />
+      <p>© 2020
+        <a href="#" className="text"> innovacentre.com.mx</a></p>
+
     </div >
   )
 }

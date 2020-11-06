@@ -1,5 +1,5 @@
 :root {
-    --principal: #0c246c;
+    --principal: #4d8cca;
 }
 
 body {
@@ -15,6 +15,94 @@ code {
 
 .content {
     min-height: 75vh;
+    margin-top: 15vh;
+}
+
+
+/* Pam */
+
+.navbar {
+    flex-wrap: initial;
+}
+
+.bg-principal {
+    background-color: var(--principal)!important;
+}
+
+.fixed-top {
+    height: 10%;
+}
+
+.app1 {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    width: 100%;
+    margin: auto;
+}
+
+.left-side {
+    width: 60%;
+    padding-top: 30vh;
+}
+
+.right-side {
+    width: 40%;
+    padding-top: 20vh;
+}
+
+.web-page-section {
+    background-color: #8c94b7;
+    min-height: 50vh;
+    font-size: 48px;
+    color: wheat;
+}
+
+.paragraph {
+    opacity: 0.5;
+}
+
+.blue-logo {
+    width: 90%;
+}
+
+.image-center {
+    width: 80%;
+}
+
+.image-icon {
+    width: 30%;
+}
+
+.image-mini {
+    width: 13%;
+}
+
+.footer {
+    background-color: var(--principal)!important;
+    width: 100%!important;
+    margin-top: 3em;
+    color: white;
+}
+
+.footer a {
+    font-size: 1.6em;
+}
+
+.footer .text {
+    font-size: 1em;
+}
+
+.contact-icons {
+    margin: 0 30%;
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.contact-icons a {
+    margin: 0 5px;
 }
 
 a {

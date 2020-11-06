@@ -3,7 +3,7 @@ import { Modal, Card, Image, Badge, Button, CardColumns } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import defaultEvent from './../../Assets/img/defaultEvent.jpg';
-import maps from './../../Assets/img/maps.png';
+import maps from './../../Assets/img/maps.jpeg';
 import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup'
 
 export default function Event() {
