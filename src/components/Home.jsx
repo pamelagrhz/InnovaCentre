@@ -17,16 +17,16 @@ export default function Home() {
       <div className="app1">
         <div className="left-side">
           <Parallax speed={7}>
-            <p className="paragraph">Este es un texto de prueba</p>
+            <h4 className="paragraph">Este es un texto de prueba</h4>
           </Parallax>
           <Parallax speed={5}>
-            <p className="paragraph">Este es un texto de prueba</p>
+            <h4 className="paragraph">Este es un texto de prueba</h4>
           </Parallax>
           <Parallax speed={3}>
-            <p className="paragraph">Este es un texto de prueba</p>
+            <h4 className="paragraph">Este es un texto de prueba</h4>
           </Parallax>
           <Parallax speed={1}>
-            <p className="paragraph">Este es un texto de prueba</p>
+            <h4 className="paragraph">Este es un texto de prueba</h4>
           </Parallax>
           <Button>Boton  </Button>
         </div>

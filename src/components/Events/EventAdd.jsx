@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Form, Col, Button, Card, Row, InputGroup, FormControl } from 'react-bootstrap';
 
 export default function EventAdd() {
   return (
     <div>
-      <h1>Agregar Eventos</h1>
       <Card>
+        <Card.Header className="py-3 bg-innova">Agregar eventos</Card.Header>
         <Card.Body>
           <Form>
 
@@ -30,8 +30,8 @@ export default function EventAdd() {
               <Form.Label>Descripción</Form.Label>
               <Form.Control as="textarea" rows={3} />
             </Form.Group>
-            <Form.Group>
-              <Form.File id="EventFile" label="Foto referente al evento" />
+            <Form.Group className="center">
+              <Form.File id="EventFile" label="Foto del evento" />
             </Form.Group>
             <Form.Row>
               <Form.Group as={Col} controlId="formGridAddress1">
@@ -72,7 +72,7 @@ export default function EventAdd() {
               </Form.Group>
               <Form.Group as={Col} controlId="formEventMax Inv">
                 <Form.Label>Máximo de invitados</Form.Label>
-                <Form.Control type="number" />
+                <Form.Control type="number" min="1" max="500" />
               </Form.Group>
             </Form.Row>
 
@@ -111,8 +111,8 @@ export default function EventAdd() {
           </Form>
         </Card.Body>
       </Card>
-      <h1>Registrar administradores</h1>
       <Card>
+        <Card.Header className="py-3 bg-innova">Agregar organizadores</Card.Header>
         <Card.Body>
           <Form>
             <Form.Row className="align-items-center">

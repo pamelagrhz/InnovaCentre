@@ -1,5 +1,6 @@
 :root {
     --principal: #4d8cca;
+    --yellow: #e6bd08;
 }
 
 body {
@@ -14,7 +15,7 @@ code {
 }
 
 .content {
-    min-height: 75vh;
+    min-height: 64vh;
     margin-top: 15vh;
 }
 
@@ -42,20 +43,20 @@ code {
 }
 
 .left-side {
-    width: 60%;
+    width: 30%;
     padding-top: 30vh;
 }
 
 .right-side {
-    width: 40%;
+    width: 70%;
     padding-top: 20vh;
 }
 
 .web-page-section {
-    background-color: #8c94b7;
+    background-color: var(--yellow);
     min-height: 50vh;
     font-size: 48px;
-    color: wheat;
+    color: white;
 }
 
 .paragraph {
@@ -63,7 +64,7 @@ code {
 }
 
 .blue-logo {
-    width: 90%;
+    width: 60%;
 }
 
 .image-center {
@@ -81,7 +82,6 @@ code {
 .footer {
     background-color: var(--principal)!important;
     width: 100%!important;
-    margin-top: 3em;
     color: white;
 }
 
@@ -91,6 +91,10 @@ code {
 
 .footer .text {
     font-size: 1em;
+}
+
+.footer p {
+    margin: 0;
 }
 
 .contact-icons {
@@ -112,9 +116,11 @@ a {
 
 .logo {}
 
-.card {
+.card,
+.modal-content {
     margin: 0 auto;
-    width: 600px!important;
+    max-width: 600px!important;
+    border-radius: 30px;
 }
 
 .card-image-details {
@@ -148,8 +154,9 @@ a {
 
 .btn-primary {
     color: #fff;
-    background-color: var(--principal)!important;
+    background-color: green!important;
     border-color: var(--principal)!important;
+    border-radius: 30px;
 }
 
 .bg-primary {
@@ -208,4 +215,35 @@ a {
     .miniEventos {
         flex-direction: column;
     }
+}
+
+.SigninLink {
+    color: var(--principal);
+    font-size: .8em;
+}
+
+.bg-innova {
+    background-color: var(--principal);
+    color: white;
+    font-size: 2em;
+}
+
+.card-header,
+.card-img-top {
+    border-radius: 30px 30px 0px 0px !important;
+}
+
+.modal-footer,
+{
+    border-radius: 0px 0px 30px 30px!important;
+}
+
+.form-control {
+    border-radius: 4.25rem;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

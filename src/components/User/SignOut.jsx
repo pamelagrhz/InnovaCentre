@@ -1,12 +1,12 @@
 import React from 'react';
-import { Form, Card, Col, Button, InputGroup, FormControl, Row, Nav } from 'react-bootstrap';
+import { Form, Card, Col, Button, InputGroup, FormControl, Row, Nav, Accordion } from 'react-bootstrap';
 
 export default function SignOut() {
-
   return (
     <div>
-      <h1>Registrate</h1>
+
       <Card>
+        <Card.Header className="py-3 bg-innova">Registrate</Card.Header>
         <Card.Body>
           <Form>
             {/* Nombre */}
@@ -67,6 +67,7 @@ export default function SignOut() {
             </Form.Text>
             <Form.Row>
 
+
               {/* Nacimiento */}
               <Form.Group as={Col} controlId="formBirthday">
                 <Form.Label >F. de Nacimiento</Form.Label>
@@ -79,6 +80,7 @@ export default function SignOut() {
                 <Form.Label>Genero</Form.Label>
 
                 <Form.Control as="select" defaultValue="Seleccionar...">
+                  <option>Seleccionar...</option>
                   <option>Femenino</option>
                   <option>Masculino</option>
                   <option>Otro</option>
@@ -96,51 +98,114 @@ export default function SignOut() {
               <Col sm={10}>
                 <Form.Control type="number" placeholder="55-00-00-00-00" />
               </Col>
+
+
             </Form.Group>
-            {/* Estudia? */}
+
+
+            {/* estudia????  */}
             <Form.Group as={Row} className="mb-3" controlId="formStudy">
               <Form.Label column sm={5} >Te encuentras estudiando?</Form.Label>
               <Col sm={7}>
                 <Form.Control as="select" defaultValue="Seleccionar...">
-                  <option>Si</option>
-                  <option>No</option>
-                </Form.Control>
-              </Col>
+                  <option value="false">No</option>
+                  <option value="true" >Si</option>
+                  <option value=""> <div>
+                    <Accordion defaultActiveKey="0">
+                      <Accordion.Toggle as={Button} variant="link" eventKey="1">
+                        Soy estudiante
+      </Accordion.Toggle>
+                      <Accordion.Collapse eventKey="1">
+                        <Form>
+                          {/* nivel */}
+                          <Form.Group as={Row} className="mb-3" controlId="formGridLevel">
+                            <Form.Label column sm={2} >Nivel</Form.Label>
+                            <Col sm={10}>
+                              <Form.Control as="select" defaultValue="Seleccionar...">
+                                <option>Seleccionar...</option>
+                                <option>Media superior</option>
+                                <option>Superior</option>
+                                <option>Egresado</option>
+                              </Form.Control>
+                            </Col>
 
-            </Form.Group>
+                          </Form.Group>
 
-            {/* nivel */}
-            <Form.Group as={Row} className="mb-3" controlId="formGridLevel">
-              <Form.Label column sm={2} >Nivel</Form.Label>
-              <Col sm={10}>
-                <Form.Control as="select" defaultValue="Seleccionar...">
-                  <option>Media superior</option>
-                  <option>Superior</option>
-                  <option>Egresado</option>
-                </Form.Control>
-              </Col>
+                          {/* Escuela */}
 
-            </Form.Group>
-
-            {/* Escuela */}
-            <Form.Row>
-              <Form.Group as={Col} controlId="formGridSchoolName">
-                <Form.Label>Escuela</Form.Label>
-                <Form.Control as="select" defaultValue="Choose...">
-                  <option>UPIICSA</option>
-                  <option>ESCA</option>
-                </Form.Control>
-              </Form.Group>
-              {/* Boleta */}
-              <Form.Group as={Col} className="mb-3" controlId="formBoleta">
-                <Form.Label>
-                  Boleta
+                          <Form.Row>
+                            <Form.Group as={Col} controlId="formGridSchoolName">
+                              <Form.Label>Escuela</Form.Label>
+                              <Form.Control as="select" defaultValue="Seleccionar...">
+                                <option>Seleccionar...</option>
+                                <option>UPIICSA</option>
+                                <option>ESCA</option>
+                              </Form.Control>
+                            </Form.Group>
+                            {/* Boleta */}
+                            <Form.Group as={Col} className="mb-3" controlId="formBoleta">
+                              <Form.Label>
+                                Boleta
                </Form.Label>
-                <Form.Control type="number" placeholder="2020000001" />
-              </Form.Group>
+                              <Form.Control type="number" placeholder="2020000001" />
+                            </Form.Group>
+                          </Form.Row>
+                        </Form>
+                      </Accordion.Collapse>
+                    </Accordion>
 
-            </Form.Row>
+                  </div></option>
+                </Form.Control>
+              </Col>
+
+            </Form.Group>
+
+            <div>
+              <Accordion defaultActiveKey="0">
+                <Accordion.Toggle as={Button} variant="link" eventKey="1">
+                  Soy estudiante
+      </Accordion.Toggle>
+                <Accordion.Collapse eventKey="1">
+                  <Form>
+                    {/* nivel */}
+                    <Form.Group as={Row} className="mb-3" controlId="formGridLevel">
+                      <Form.Label column sm={2} >Nivel</Form.Label>
+                      <Col sm={10}>
+                        <Form.Control as="select" defaultValue="Seleccionar...">
+                          <option>Media superior</option>
+                          <option>Superior</option>
+                          <option>Egresado</option>
+                        </Form.Control>
+                      </Col>
+
+                    </Form.Group>
+
+                    {/* Escuela */}
+
+                    <Form.Row>
+                      <Form.Group as={Col} controlId="formGridSchoolName">
+                        <Form.Label>Escuela</Form.Label>
+                        <Form.Control as="select" defaultValue="Choose...">
+                          <option>UPIICSA</option>
+                          <option>ESCA</option>
+                        </Form.Control>
+                      </Form.Group>
+                      {/* Boleta */}
+                      <Form.Group as={Col} className="mb-3" controlId="formBoleta">
+                        <Form.Label>
+                          Boleta
+               </Form.Label>
+                        <Form.Control type="number" placeholder="2020000001" />
+                      </Form.Group>
+                    </Form.Row>
+                  </Form>
+                </Accordion.Collapse>
+              </Accordion>
+
+            </div>
+            {/* tengo cuenta */}
             <Nav.Link className="linkButton" href="/signin">Ya tengo una cuenta.</Nav.Link>
+
 
             {/* Checkbox */}
             <Form.Group id="formGridCheckbox">
@@ -151,6 +216,10 @@ export default function SignOut() {
               Confirmar
   </Button>
           </Form>
+
+
+
+
         </Card.Body>
       </Card>
     </div >

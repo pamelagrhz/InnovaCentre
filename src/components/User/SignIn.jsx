@@ -1,11 +1,28 @@
-import React from 'react';
-import { Card, Form, Button, Nav } from 'react-bootstrap';
+import React, { useState } from 'react';
+import { Card, Button, Modal, Image, Row, Col, Toast, Form } from 'react-bootstrap';
+import Mail from '../../Assets/img/mail-3.png'
+
 
 export default function SignIn() {
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+  const [show1, setShow1] = useState(false);
+
+
+  // function colorDay(today = new Date()) {
+  //   var color = "Light";
+  //   console.log(today)
+  //   if (today === today) {
+  //     color = "warning";
+  //   }
+  //   return color;
+  // }
   return (
-    <div className='sign-in'>
-      <h1>Iniciar sesión</h1>
+    <div className='sign-in '>
       <Card>
+        <Card.Header className="py-3 bg-innova">Iniciar sesión</Card.Header>
         <Card.Body>
           <Form>
             <Form.Group controlId="formEmail">
@@ -19,19 +36,65 @@ export default function SignIn() {
 
             </Form.Group>
             <Form.Group controlId="formCheckbox">
-              <Nav.Link className="linkButton" href="/signout">Aun no tengo una cuenta.</Nav.Link>
-              <Nav.Link className="linkButton" href="#">Olvidé mi contraseña.</Nav.Link>
+              <a className="SigninLink" href="/signout">Aun no tengo una cuenta. /</a>
+              <a className="SigninLink" onClick={handleShow}>Olvidé mi contraseña.</a>
+
               <Form.Check type="checkbox" label="Recuerdame" />
             </Form.Group>
-            <Button variant="primary" type="submit" size="lg" block>
+            <Button variant="primary" type="submit" block>
               Ingresar
   </Button>
           </Form>
         </Card.Body>
       </Card>
+      {/* Mostrar*/}
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Recuperar mi contraseña</Modal.Title>
+        </Modal.Header>
+        <div>
+          <Modal.Body>
+            <h4>Ingresa el correo de la cuenta de la que quieres recuperar tu contraseña:</h4>
+            <p>Te enviaremos un código al correo ingresado, para que puedas volver a ingresar.</p>
+
+            <div className="center"><Image src={Mail} className="image-icon" fluid></Image></div>
+            <Form>
+              <Form.Group controlId="formBasicEmail">
+                <Form.Label></Form.Label>
+                <Form.Control type="email" placeholder="Enter email" />
+              </Form.Group>
+            </Form>
+          </Modal.Body>
+          <Modal.Footer>
+            <Row>
+
+              <Col xs={6}>
+                <Button onClick={() => setShow1(true), handleClose}>Show Toast</Button>
+              </Col>
+
+            </Row>
+
+          </Modal.Footer>
+        </div>
 
 
-
+      </Modal>
+      <Row>
+        <Col xs={6}>
+          <Toast onClose={() => setShow(false)} show={show} delay={5000} autohide>
+            <Toast.Header>
+              <img
+                src="holder.js/20x20?text=%20"
+                className="rounded mr-2"
+                alt=""
+              />
+              <strong className="mr-auto">Correo Enviado</strong>
+              <small>Hace un momento</small>
+            </Toast.Header>
+            <Toast.Body>Revisa tu bandeja de entrada!</Toast.Body>
+          </Toast>
+        </Col>
+      </Row>
     </div >
   )
 }

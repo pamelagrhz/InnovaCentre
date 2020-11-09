@@ -2,14 +2,12 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import NavBar from './components/Navbar.jsx';
 import SignIn from './components/User/SignIn';
-
 import Perfil from './components/User/Perfil';
 import SignOut from './components/User/SignOut'
 import Footer from './components/Footer';
-import Event from './components/Styles/Event'
+import Event from './components/Events/Event'
 import EventAdd from './components/Events/EventAdd'
 import Home from './components/Home';
-
 import './App.css';
 
 function App() {
@@ -42,6 +40,7 @@ function App() {
       </div>
 
       <Footer />
+
     </div >
 
   );
