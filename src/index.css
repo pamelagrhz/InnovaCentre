@@ -1,5 +1,5 @@
 :root {
-    --principal: #4d8cca;
+    --principal: #1f0d81;
     --yellow: #e6bd08;
 }
 
@@ -246,4 +246,11 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.imgRedonda {
+    width: 20vh;
+    height: 20vh;
+    border-radius: 150px;
+    border: 1px solid black;
 }

@@ -4,6 +4,7 @@ import { Tab, Row, Col, Nav, Badge } from 'react-bootstrap';
 import { ProSidebar } from 'react-pro-sidebar';
 import { Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
 import { Link } from 'react-router-dom';
+import Profile from '../../Assets/img/profile.jpeg'
 
 import 'react-pro-sidebar/dist/css/styles.css';
 
@@ -16,6 +17,7 @@ export default function Perfil() {
             <Nav variant="pills" className="flex-column">
               <ProSidebar>
                 <Menu iconShape="square">
+                  <MenuItem disabled eventKey="first" className="center" > <img src={Profile} alt="" className="imgRedonda" /></MenuItem>
                   <MenuItem disabled eventKey="first" ><h4>Mark Otto</h4></MenuItem>
 
                   <MenuItem eventKey="first" >Mi perfil</MenuItem>
