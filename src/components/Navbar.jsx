@@ -7,8 +7,8 @@ import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 export default function NavBar() {
   return (
     <div>
-      <Navbar bg="principal" expand="lg" className="fixed-top">
-        <Navbar.Brand href="#home">
+      <Navbar bg="principal" expand="lg" className="fixed-top" variant="dark">
+        <Navbar.Brand href="/home">
           <img
             alt=""
             src={logo}
@@ -23,11 +23,7 @@ export default function NavBar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto ">
-            <Nav.Link href="/home">Home</Nav.Link>
-            <Nav.Link href="/event" >Eventos</Nav.Link>
-
-            <Nav.Link href="#link" disabled>Cotizador</Nav.Link>
-
+            <Nav.Link href="#link" disabled></Nav.Link>
           </Nav>
           <a href="/signin" >Iniciar sesión/</a>
           <a href="/signout" >Registrarse</a>
