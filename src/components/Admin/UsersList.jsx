@@ -4,6 +4,7 @@ import Profile from '../../Assets/img/profile.jpeg'
 import Switch from '../Styles/Switch'
 
 export default function UsersList() {
+  const [value, setValue] = useState(false);
   var toggler = document.querySelector('.toggle-switch');
   // toggler.onclick = function () {
   //   toggler.classList.toggle('active');
@@ -56,10 +57,9 @@ export default function UsersList() {
             <p>Estudiante: {user.study.studing}</p>
           </Card.Text>
           <Card.Link className="linkButton" href="#" onClick={handleShow}>Ver más</Card.Link>
-          <Switch />
           <Form>
             {['checkbox'].map((type) => (
-              <div className="">
+              <div className="row center">
                 <Form.Check
                   disabled checked
                   type="radio"
@@ -81,6 +81,13 @@ export default function UsersList() {
                 />
               </div>
             ))}
+            <div className="center">
+              <Switch
+                isOn={value}
+                handleToggle={() => setValue(!value)}
+              />
+            </div>
+
           </Form>
         </Card.Body>
       </Card>
