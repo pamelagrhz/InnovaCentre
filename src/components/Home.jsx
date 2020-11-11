@@ -17,13 +17,14 @@ export default function Home() {
             <div className="left-side">
 
               <Parallax speed={5}>
-                <p className="">Marketing </p>
+                <h3>¿Que serviciospuedes encontrar en InnovaCentre?</h3>
+                <h4 className="">Marketing </h4>
               </Parallax>
               <Parallax speed={2}>
-                <p className="">Procesos </p>
+                <h4 className="">Procesos </h4>
               </Parallax>
               <Parallax speed={1}>
-                <p className="">Digitales </p>
+                <h4 className="">Digitales </h4>
               </Parallax>
               <br />
               <Button variant="danger" size="lg">Boton  </Button>
@@ -41,6 +42,38 @@ export default function Home() {
       <div className="bg-card bg-purple">
         Digital
       </div>
+
+      <div className="app1">
+        {/* Servicios */}
+
+
+
+        <div className="right-side">
+          <Parallax speed={0}>
+            <img src={Desk} alt="" className="blue-logo" />
+          </Parallax>
+        </div>
+        <div className="left-side">
+          <Parallax speed={0}>
+            <p className=""> Implementación de ecommerce  </p>
+          </Parallax>
+          <Parallax speed={0}>
+            <p className="">Diseño gráfico  ​</p>
+          </Parallax>
+          <Parallax speed={0}>
+            <p className="">Marketing Digital</p>
+          </Parallax>
+          <Parallax speed={0}>
+            <p className="">Publicidad </p>
+          </Parallax>
+          <Parallax speed={0}>
+            <p className="">Community Manager </p>
+          </Parallax>
+          <br />
+          <Button variant="danger" size="lg">Boton  </Button>
+        </div>
+      </div>
+
     </div >
   )
 }

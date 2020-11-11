@@ -297,7 +297,7 @@ a {
 }
 
 .divided-color {
-    background: -webkit-linear-gradient(110deg, #9fa8da 60%, #9fa8da 60%);
+    background: -webkit-linear-gradient(110deg, #9fa8da 60%, #556adf 60%);
 }
 
 .bg-purple {
@@ -319,7 +319,7 @@ a {
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
-    width: 45px;
+    width: 25px;
     height: 25px;
     background: grey;
     border-radius: 100px;
