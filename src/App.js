@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 import Event from './components/Events/Event'
 import EventAdd from './components/Events/EventAdd'
 import Home from './components/Home';
+import UsersList from './components/Admin/UsersList';
 import './App.css';
 
 function App() {
@@ -19,6 +20,9 @@ function App() {
           <Switch>
             <Route path="/home">
               <Home />
+            </Route>
+            <Route path="/users-list">
+              <UsersList />
             </Route>
             <Route path="/signin">
               <SignIn />
