@@ -1,0 +1,354 @@
+<html>
+
+<head>
+    <!-- relaciona con viajes-especiales-confirm.css-->
+    <link rel="stylesheet" type="text/css" href="viajes-especiales-confirm.css">
+</head>
+
+<body>
+    <style type="text/css">
+         :root {
+            --principal: #62297A;
+            --yellow: #fc9c0d;
+        }
+        
+        html,
+        body {
+            background-color: #e9e9e9;
+            font-family: Roboto, 'Helvetica', sans-serif;
+        }
+        
+        .card {
+            margin: 0 auto;
+            max-width: 572px;
+            font-family: Roboto, 'Helvetica', sans-serif;
+        }
+        
+        .container {
+            margin: 0 auto;
+            min-height: 1020px;
+            width: 572px;
+            border-radius: 5px;
+            background-color: #ffffff;
+            font-family: Roboto, 'Helvetica', sans-serif;
+        }
+        
+        .container .content {
+            padding: 0px 10px;
+            width: 450px;
+        }
+        
+        .total .header {
+            margin: 0 auto;
+            text-align: center;
+            display: flex;
+            align-items: center;
+        }
+        
+        .container .header .img {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding-top: 30px;
+        }
+        
+        .container .header .img img {
+            width: 40%;
+        }
+        
+        .container .content {
+            margin-left: 60px;
+        }
+        
+        .container .content h1 {
+            color: var(--yellow);
+            font-size: 24px;
+            font-weight: bold;
+            line-height: 28px;
+            margin-top: 45px;
+        }
+        
+        .container .content .title {
+            height: 28px;
+            width: 437px;
+            color: #383838;
+            font-size: 13px;
+            line-height: 28px;
+        }
+        
+        .container .content .title .name {
+            color: #4a4a4a;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        
+        .container .content .data-title {
+            color: var(--principal);
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 19px;
+            margin-top: 33px;
+        }
+        
+        .container .content .data-title .data-value {
+            font-weight: bold;
+            margin-left: 14px;
+        }
+        
+        .container .content .separator {
+            height: 1px;
+            width: 450px;
+            background: #f0f0f0;
+            margin-top: 18px;
+            margin-bottom: 18px;
+        }
+        
+        .container .content .travel-data {
+            color: var(--principal);
+            font-size: 13px;
+            font-weight: 300;
+            line-height: 25px;
+            padding: 5px 0px;
+        }
+        
+        .container .content .travel-data .travel-data-value {
+            font-weight: bold;
+        }
+        
+        .container .content .travel-data .table-data-travel {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        
+        .container .content .travel-data .travel-data-rigth {
+            text-align: right;
+        }
+        
+        .container .content .travel-data .travel-data-rigth .travel-data-left {
+            display: inline-block;
+            text-align: left;
+        }
+        
+        .container .content .travel-data .table-data-travel tbody,
+        .container .content .travel-data .table-data-travel tbody tr {
+            width: 100%;
+        }
+        
+        .container .content .travel-data .table-data-travel .travel-data-title {
+            color: var(--principal);
+            font-size: 18px;
+            line-height: 21px;
+            margin-bottom: 12px;
+            font-weight: bold;
+            text-align: left;
+        }
+        
+        .container .content .travel-data .table-data-travel .arrow {
+            width: 19.24px;
+        }
+        
+        .container .content .travel-data .table-data-travel td.tdArrow {
+            width: 15%;
+            text-align: center;
+        }
+        
+        .container .content .date {
+            height: 16px;
+            width: 166px;
+            color: #393939;
+            font-size: 14px;
+            line-height: 18px;
+        }
+        
+        .container .content .v-middle {
+            vertical-align: middle;
+        }
+        
+        .container .content .v-bottom {
+            vertical-align: bottom;
+        }
+        
+        .container .content .mx-1 {
+            margin-left: 0.25rem;
+            margin-right: 0.25rem;
+        }
+        
+        .container .content .mx-2 {
+            margin-left: 0.75rem;
+            margin-right: 0.75rem;
+        }
+        
+        .container .content .float-right {
+            float: right;
+        }
+        
+        .container .content .travel-data .purchase-data {
+            min-width: 53px;
+            color: #949494;
+            font-size: 14px;
+            line-height: 16px;
+        }
+        
+        .container .content .travel-data .purchase-data .img-ticket {
+            width: 15px;
+        }
+        
+        .container .content .travel-data .purchase-data .img-calendar {
+            width: 18px;
+        }
+        
+        .container .content .total {
+            color: var(--principal);
+            font-size: 13px;
+            line-height: 40px;
+        }
+        
+        .container .content .total .total-txt-content {
+            margin-top: 24px;
+            margin-bottom: 40px;
+            text-align: right;
+        }
+        
+        .container .content .total .price {
+            color: var(--principal);
+            font-size: 30px;
+            line-height: 35px;
+            text-align: right;
+            margin-left: 12px;
+        }
+        
+        .container .content .total .currency {
+            color: var(--principal);
+            font-size: 13px;
+            line-height: 15px;
+        }
+        
+        .container .content .total .info {
+            width: 400px;
+            color: #000000;
+            font-size: 13px;
+            line-height: 20px;
+            text-align: center;
+            margin-bottom: 37px;
+            margin-left: 20px;
+        }
+        
+        .container .content .total .info a {
+            color: var(--principal);
+            font-weight: bold;
+        }
+        
+        .container .content .total .button {
+            height: 49px;
+            width: 190px;
+            border-radius: 50px;
+            background-color: var(--principal);
+            color: #ffffff;
+            margin-bottom: 50px;
+            justify-content: space-around;
+            margin-left: 20px;
+        }
+        
+        .container .content .legal-warning {
+            color: #838383;
+            font-size: 10px;
+            line-height: 15px;
+            padding: 22px 0px;
+        }
+        
+        .do-not-receive {
+            margin: 0 auto;
+            height: 50px;
+            width: 472px;
+            color: #838383;
+            font-family: Roboto;
+            font-size: 12px;
+            line-height: 25px;
+            text-align: center;
+            padding: 30px 42px;
+            margin-top: 30px;
+        }
+        
+        .do-not-recive a {
+            text-decoration: underline;
+            color: #484848;
+        }
+    </style>
+
+    <div class="container">
+        <div class="header">
+            <div class="img">
+                <!-- AQUI VA UNA IMAGEN-->
+                <img src='../../Assets/img/logo-purple.png'></img>
+                <BR>
+            </div>
+        </div>
+        <!-- /div de headr-->
+        <div class="content">
+            <h1>
+                Te has inscrito con éxito a:
+                <div>IBM Women in technology.</div>
+            </h1>
+            <div class="title">Estimad@: <span class="name">Jose Luis Noriega</span> </div>
+            <div class="title">
+                Aquí están los detalles sobre tu entrada:
+            </div>
+            <div class="data-title">Codigo de transacción<span class="data-value">XEF81</span></div>
+            <div class="separator"></div>
+
+            <div class="travel-data">Boleto n.5698680
+                <div class="travel-data-value"> Juana Luisa Noriega Méndez</div>
+                <div class="travel-data-value">example@gmail.com</div>
+                <div class="travel-data-value">UPIICSA</div>
+            </div>
+
+
+            <div class="separator"></div>
+            <div class="travel-data">
+                <table class="table-data-travel">
+                    <tr>
+                        <td>
+                            <div class="travel-data-title">UPIICSA, CDMX</div>
+                            <span class="date">Wed. 5 dec 2020 - 5:00 PM</span>
+                        </td>
+                    </tr>
+                </table>
+                <!-- AQUI VA UNA IMAGEN-->
+                <div class="purchase-data">Purchase:
+                    <span class="date">1 / Jan / 2020 18:23:06</span>
+                    <div class="float-right">
+                        <!-- AQUI VA UNA IMAGEN-->
+                        <img class="img-ticket mx-1" src="">
+                        <span class="date">1 ticket</span>
+                    </div>
+                </div>
+            </div>
+            <!-- /div de trableData-->
+            <div class="separator"></div>
+
+            <div class="total">
+                <div class="total-txt-content">
+                    <span class="total-txt">Total
+                        <span class="price">$1,824.00 <span class="currency">MXN</span></span>
+                    </span>
+                </div>
+
+                <div class="info">
+
+                    If you wish to consult more about your purchase you can log in and enter the purchase history in your profile or, if you do not have an account, consult the section of <a href="#">My tickets</a>
+                </div>
+                <button class="button">Iniciar sesión</button>
+                <button class="button">Mis entradas</button>
+                <div class="separator"></div>
+            </div>
+            <!-- /div de total-->
+            <div class="legal-warning">LEGAL NOTICE: This email, including, where appropriate, the files materialization, other use or act related to the content of this message and its attachments, they are forbidden In case of not recognizing this email we ask you to delete both
+                the message and its attachments, without keep a copy.</div>
+        </div>
+        <!-- /div de content-->
+    </div>
+    <!-- /div de container-->
+    <div class="do-not-receive">If you do not wish to receive any further e-mails from us, please follow this link to remove your address from the list. <a href="#">Unsuscribe.</a></div>
+</body>
+
+</html>
