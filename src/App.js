@@ -9,7 +9,9 @@ import Event from './components/Events/Event'
 import EventAdd from './components/Events/EventAdd'
 import Home from './components/Home';
 import UsersList from './components/Admin/UsersList';
+import Cotizador from './components/Cotizador/CotizadorP';
 import './App.css';
+
 
 function App() {
   return (
@@ -38,6 +40,9 @@ function App() {
             </Route>
             <Route path="/perfil">
               <Perfil />
+            </Route>
+            <Route path="/cotizador">
+              <Cotizador/>
             </Route>
           </Switch>
         </Router >

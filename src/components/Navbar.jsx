@@ -32,6 +32,7 @@ export default function NavBar() {
             <NavDropdown.Item href="/event">Eventos</NavDropdown.Item>
             <NavDropdown.Item href="#action/3.3">Organizadores</NavDropdown.Item>
             <NavDropdown.Item href="/eventadd">agregar eventos</NavDropdown.Item>
+            <NavDropdown.Item href="/cotizador">Cotizar</NavDropdown.Item>
 
             <NavDropdown.Divider />
             <NavDropdown.Item href="#action/3.4">Cerrar sesión</NavDropdown.Item>
