@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Modal, Card, Row, Col, Image, Badge, Button, Nav, Form, FormControl, NavDropdown } from 'react-bootstrap';
 import Profile from '../../Assets/img/profile.jpeg'
-import Switch from '../Styles/Switch'
+import Switch from '../StyleComponent/Switch'
 
 export default function UsersList() {
   const [value, setValue] = useState(false);
