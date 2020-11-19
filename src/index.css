@@ -1,3 +1,5 @@
+@import './components/Styles/stars.css';
+@import './components/Styles/color-change.css';
 :root {
     --principal: #1f0d81;
     --yellow: #e6bd08;
@@ -20,7 +22,7 @@ h2 {
 
 .content {
     min-height: 64vh;
-    margin-top: 15vh;
+    margin-top: 10vh;
 }
 
 
@@ -41,20 +43,26 @@ h2 {
 .app1 {
     display: flex;
     flex-direction: row;
-    min-height: 100vh;
+    min-height: 10vh;
     width: 100%;
     margin: auto;
     justify-items: flex-start;
 }
 
-.left-side {
+.med-size {
     width: 50%;
-    padding-top: 20vh;
 }
 
-.right-side {
+.med-size img {
+    width: 60%;
+}
+
+.max-size {
+    width: 60%;
+}
+
+.max-size img {
     width: 50%;
-    padding-top: 20vh;
 }
 
 .web-page-section {
@@ -120,6 +128,17 @@ a {
 }
 
 .logo {}
+
+.isDisabled {
+    color: currentColor;
+    cursor: not-allowed;
+    opacity: 0.5;
+    text-decoration: none;
+}
+
+.white-shadow {
+    text-shadow: black 0.1em 0.1em 0.2em
+}
 
 .card,
 .modal-content {
@@ -284,7 +303,6 @@ a {
     height: 4em;
     width: 64em;
     padding: 0.5em 1em;
-    border-radius: 0.25em;
     display: table-cell;
     vertical-align: middle;
     letter-spacing: -2px;
@@ -305,12 +323,13 @@ a {
     background: -webkit-linear-gradient(110deg, #9fa8da 60%, #556adf 60%);
 }
 
-.bg-purple {
+.bg-red {
+    height: 30px!important;
     color: #fff;
-    background: -webkit-linear-gradient(110deg, #a60af3 40%, rgba(0, 0, 0, 0) 30%), -webkit-radial-gradient(farthest-corner at 0% 0%, #7a00cc 70%, #c03fff 70%);
-    background: -o-linear-gradient(110deg, #a60af3 40%, rgba(0, 0, 0, 0) 30%), -o-radial-gradient(farthest-corner at 0% 0%, #7a00cc 70%, #c03fff 70%);
-    background: -moz-linear-gradient(110deg, #a60af3 40%, rgba(0, 0, 0, 0) 30%), -moz-radial-gradient(farthest-corner at 0% 0%, #7a00cc 70%, #c03fff 70%);
-    background: linear-gradient(110deg, #a60af3 40%, rgba(0, 0, 0, 0) 30%), radial-gradient(farthest-corner at 0% 0%, #7a00cc 70%, #c03fff 70%);
+    background: -webkit-linear-gradient(110deg, #f34c0a9f 40%, rgba(0, 0, 0, 0) 30%), -webkit-radial-gradient(farthest-corner at 0% 0%, #cc1800f1 70%, #cc0e00b2 70%);
+    background: -o-linear-gradient(110deg, #f34c0a9f 40%, rgba(0, 0, 0, 0) 30%), -o-radial-gradient(farthest-corner at 0% 0%, #cc1800f1 70%, #cc0e00b2 70%);
+    background: -moz-linear-gradient(110deg, #f34c0a9f 40%, rgba(0, 0, 0, 0) 30%), -moz-radial-gradient(farthest-corner at 0% 0%, #cc1800f1 70%, #cc0e00b2 70%);
+    background: linear-gradient(110deg, #f34c0a9f 40%, rgba(0, 0, 0, 0) 30%), radial-gradient(farthest-corner at 0% 0%, #cc1800f1 70%, #cc0e00b2 70%);
 }
 
 .react-switch-checkbox {
