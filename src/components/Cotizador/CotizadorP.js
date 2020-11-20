@@ -1,6 +1,6 @@
 import React from 'react';
 import '../Styles/cotizadorStyless.css';
-
+import logo from '../../Assets/img/world.png'
 
 export default function Cotizador(){
 
@@ -14,7 +14,7 @@ export default function Cotizador(){
                     <h3 class="">¡Bienvenido! <br/>A nuestro cotizador de servicios</h3>
                 </div>
                 <div className="py-3">
-                    <img src="../../Assets/img/cloud.png" className="responsiveImg" alt=""/>
+                    <img src={logo} className="responsiveImg" alt=""/>
                 </div>
                 <div className="py-3">
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi, temporibus!</p>
@@ -56,10 +56,10 @@ export default function Cotizador(){
                         
                     </div>                
                     
-                    <h4 class="py-3">Fecha de entrega</h4>
+                    <h4 class="py-3">Recaptcha</h4>
 
                     <div class="form-group row">
-                        <input type="date"  className="form-control col-xl-4 col-lg-4 col-md-6 offset-md-3 col-sm-10 col-10 offset-1 offset-lg-4"/>
+                        
                     </div>
 
                     <div class="py-3 form-group ">

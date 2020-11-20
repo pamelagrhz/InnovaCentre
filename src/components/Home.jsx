@@ -10,11 +10,12 @@ import Desktop from '../Assets/img/desk.jpg'
 import Stars from './StyleComponent/Stars';
 import { faBolt, faKeyboard, faRocket, faDribble, faPlusCircle } from '@fortawesome/free-solid-svg-icons';
 import WebPage from '../Assets/img/wbpg.png'
+import Wave from './Wave/wave'
 export default function Home() {
   return (
     <div>
       <Stars></Stars>
-
+      <Wave></Wave>
       <div className="bg-card divided-color">
         Nuestros servicios
   <Parallax speed={2}>
