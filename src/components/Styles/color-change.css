@@ -7,6 +7,16 @@
     height: 50%;
 }
 
+.color-ch h3,
+p {
+    font-size: 3em;
+    color: white;
+}
+
+p {
+    font-size: 2em;
+}
+
 @keyframes gradient {
     0% {
         background-position: 0% 50%;
