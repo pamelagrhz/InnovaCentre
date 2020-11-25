@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Modal, Card, Row, Col, Image, Badge, Button, Nav, Form, FormControl, NavDropdown } from 'react-bootstrap';
+import { Modal, Card, Row, Col, Image, Badge, Button, Nav, Form, FormControl, NavDropdown, Tab, Tabs } from 'react-bootstrap';
 import Profile from '../../Assets/img/profile.jpeg'
 import Switch from '../StyleComponent/Switch'
 
@@ -28,69 +28,65 @@ export default function UsersList() {
   }
   return (
     <div>
-      <h1>Usuarios</h1>
-      {/* Nav */}
-      <>
-        <Nav className="justify-content-end" activeKey="/home">
-          <NavDropdown title="Filtrar por..." id="basic-nav-dropdown">
-            <NavDropdown.Item href="#action/3.1">Estudiantes</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.2">Gestor de servicios</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.3">Gestor de usuarios</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.4">Gestor de noticias</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.4">Gestor de eventos</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.4">Organizadores</NavDropdown.Item>
-          </NavDropdown>
-          <Form inline>
-            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-            <Button variant="outline-success">Search</Button>
-          </Form>
-        </Nav>
-      </>
-      {/* Usuarios */}
-      <Card className="leftcard mini-card user-list">
-        <Card.Img variant="top" src={Profile} className="imgRedonda center" />
-        <Card.Body>
-          <Card.Subtitle className="mb-2 text-muted">@{user.uname}</Card.Subtitle>
-          <Card.Title>{user.name} {user.lname}</Card.Title>
-          <Card.Subtitle className="mb-2 text-muted">{user.mail}</Card.Subtitle>
-          <Card.Text >
-            <p>Estudiante: {user.study.studing}</p>
-          </Card.Text>
-          <Card.Link className="linkButton" href="#" onClick={handleShow}>Ver más</Card.Link>
-          <Form>
-            {['checkbox'].map((type) => (
-              <div className="row center">
-                <Form.Check
-                  disabled checked
-                  type="radio"
-                  id=""
-                  label="N"
-                />
+      <h2>Gestión de usuarios</h2>
+      {/* Filtro */}
+      <Tabs defaultActiveKey="Estudiantes" className="black" transition={false} id="noanim-tab-example">
+        <Tab eventKey="home" className="black" title="Home">
+          {/* Usuarios */}
+          <Card className="leftcard mini-card user-list">
+            <Card.Img variant="top" src={Profile} className="imgRedonda center" />
+            <Card.Body>
+              <Card.Subtitle className="mb-2 text-muted">@{user.uname}</Card.Subtitle>
+              <Card.Title>{user.name} {user.lname}</Card.Title>
+              <Card.Subtitle className="mb-2 text-muted">{user.mail}</Card.Subtitle>
+              <Card.Text >
+                <p>Estudiante: {user.study.studing}</p>
+              </Card.Text>
+              <Card.Link className="linkButton" href="#" onClick={handleShow}>Ver más</Card.Link>
+              <Form>
+                {['checkbox'].map((type) => (
+                  <div className="row center">
+                    <Form.Check
+                      disabled checked
+                      type="radio"
+                      id=""
+                      label="N"
+                    />
 
-                <Form.Check
-                  disabled
-                  type="radio"
-                  label="U"
-                  id=""
-                />
-                <Form.Check
-                  disabled checked
-                  type="radio"
-                  id=""
-                  label="E"
-                />
-              </div>
-            ))}
-            <div className="center">
-              <Switch
-                isOn={value}
-                handleToggle={() => setValue(!value)}
-              />
-            </div>
+                    <Form.Check
+                      disabled
+                      type="radio"
+                      label="U"
+                      id=""
+                    />
+                    <Form.Check
+                      disabled checked
+                      type="radio"
+                      id=""
+                      label="E"
+                    />
+                  </div>
+                ))}
+                <div className="center">
+                  <Switch
+                    isOn={value}
+                    handleToggle={() => setValue(!value)}
+                  />
+                </div>
 
-          </Form>
-        </Card.Body>
-      </Card>
+              </Form>
+            </Card.Body>
+          </Card>
+        </Tab>
+        <Tab eventKey="profile" title="Profile">
+          some
+        </Tab>
+        <Tab eventKey="contact" title="Contact">
+          some
+        </Tab>
+      </Tabs>
+
+
 
 
       {/* Modelo a mostrar */}

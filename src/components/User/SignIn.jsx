@@ -20,7 +20,7 @@ export default function SignIn() {
   //   return color;
   // }
   return (
-    <div className='sign-in '>
+    <div >
       <Card>
         <Card.Header className="py-3 bg-innova">Iniciar sesión</Card.Header>
         <Card.Body>

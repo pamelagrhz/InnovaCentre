@@ -2,6 +2,7 @@
 @import "./components/Styles/color-change.css";
 @import "./components/Styles/stylesWave.css";
 @import './components/Styles/home-promo-cards.css';
+@import './components/Styles/user-menu.css';
 :root {
     --principal: #1f0d81;
     --yellow: #e6bd08;
@@ -23,7 +24,7 @@ h2 {
 }
 
 .content {
-    min-height: 64vh;
+    min-height: 73vh;
     margin-top: 9vh;
 }
 
@@ -32,6 +33,10 @@ h2 {
 
 .navbar {
     flex-wrap: initial;
+}
+
+a.black {
+    color: black!important;
 }
 
 .bg-principal {
@@ -124,12 +129,10 @@ h2 {
     margin: 0 5px;
 }
 
-a {
+a.white {
     color: #ffffff;
     text-decoration: none;
 }
-
-.logo {}
 
 .isDisabled {
     color: currentColor;
@@ -148,6 +151,7 @@ a {
     max-width: 600px !important;
     border-radius: 30px;
     background-color: #cfd8dc;
+    margin-bottom: 3em;
 }
 
 .card-image-details {
@@ -168,7 +172,6 @@ a {
 .footer {
     background-color: var(--principal) !important;
     width: 100% !important;
-    margin-top: 3em;
     color: white;
 }
 
@@ -371,4 +374,46 @@ a {
 
 .react-switch-label:active .react-switch-button {
     width: 60px;
+}
+
+.client-div {
+    background-color: black;
+    color: white;
+    padding: 2em;
+    display: flex;
+    flex-direction: row;
+}
+
+.client-form {
+    width: 50%;
+}
+
+.contact-us {
+    margin-top: 5em;
+    width: 50%;
+    display: flex;
+    align-self: center;
+    transform: rotate(90deg);
+}
+
+.contact-us img {
+    width: 80%;
+}
+
+@media only screen and (max-width: 620px) {
+    .client-div {
+        flex-direction: column;
+    }
+    .client-form {
+        width: 100%;
+    }
+    .contact-us {
+        margin-top: 0em;
+        transform: rotate(0deg);
+        width: 100%;
+    }
+}
+
+.landing {
+    background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
 }

@@ -10,6 +10,7 @@ import EventAdd from './components/Events/EventAdd'
 import Home from './components/Home';
 import UsersList from './components/Admin/UsersList';
 import Cotizador from './components/Cotizador/CotizadorP';
+import Landing from './components/Landing/WebPage'
 import './App.css';
 
 
@@ -22,6 +23,9 @@ function App() {
           <Switch>
             <Route path="/home">
               <Home />
+            </Route>
+            <Route path="/webpage">
+              <Landing />
             </Route>
             <Route path="/users-list">
               <UsersList />
@@ -42,7 +46,7 @@ function App() {
               <Perfil />
             </Route>
             <Route path="/cotizador">
-              <Cotizador/>
+              <Cotizador />
             </Route>
           </Switch>
         </Router >
