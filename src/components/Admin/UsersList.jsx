@@ -1,17 +1,9 @@
 import React, { useState } from 'react';
-import { Modal, Card, Row, Col, Image, Badge, Button, Nav, Form, FormControl, NavDropdown, Tab, Tabs } from 'react-bootstrap';
+import { Modal, Card, Row, Col, Badge, Button, Nav, Form, FormControl, NavDropdown, Tab, Tabs } from 'react-bootstrap';
 import Profile from '../../Assets/img/profile.jpeg'
 import Switch from '../StyleComponent/Switch'
 
 export default function UsersList() {
-  const [value, setValue] = useState(false);
-  var toggler = document.querySelector('.toggle-switch');
-  // toggler.onclick = function () {
-  //   toggler.classList.toggle('active');
-  // }
-  const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
 
   const user = {
     name: "Mark",
@@ -24,8 +16,25 @@ export default function UsersList() {
       studing: "si",
       level: "superior",
       school: "ESIME"
+    },
+    permits: {
+      users: false,
+      events: true,
     }
   }
+
+
+  const [value, setValue] = useState(false);
+  var toggler = document.querySelector('.toggle-switch');
+  // toggler.onclick = function () {
+  //   toggler.classList.toggle('active');
+  // }
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+
+
   return (
     <div>
       <h2>Gestión de usuarios</h2>
@@ -34,7 +43,10 @@ export default function UsersList() {
         <Tab eventKey="home" className="black" title="Home">
           {/* Usuarios */}
           <Card className="leftcard mini-card user-list">
-            <Card.Img variant="top" src={Profile} className="imgRedonda center" />
+            <div className="center">
+              <Card.Img variant="top" src={Profile} className="imgRedonda center" />
+            </div>
+
             <Card.Body>
               <Card.Subtitle className="mb-2 text-muted">@{user.uname}</Card.Subtitle>
               <Card.Title>{user.name} {user.lname}</Card.Title>
@@ -42,39 +54,32 @@ export default function UsersList() {
               <Card.Text >
                 <p>Estudiante: {user.study.studing}</p>
               </Card.Text>
-              <Card.Link className="linkButton" href="#" onClick={handleShow}>Ver más</Card.Link>
               <Form>
                 {['checkbox'].map((type) => (
                   <div className="row center">
                     <Form.Check
                       disabled checked
-                      type="radio"
-                      id=""
-                      label="N"
+                      type="checkbox"
+                      id="UsersPermits"
+                      label="Users"
                     />
 
                     <Form.Check
                       disabled
-                      type="radio"
-                      label="U"
-                      id=""
+                      type="checkbox"
+                      label="Events"
+                      id="EventsPermits"
                     />
                     <Form.Check
                       disabled checked
-                      type="radio"
-                      id=""
-                      label="E"
+                      type="checkbox"
+                      id="NewsPermits"
+                      label="News"
                     />
                   </div>
                 ))}
-                <div className="center">
-                  <Switch
-                    isOn={value}
-                    handleToggle={() => setValue(!value)}
-                  />
-                </div>
-
               </Form>
+              <Button onClick={handleShow} href="">+</Button>
             </Card.Body>
           </Card>
         </Tab>
@@ -92,14 +97,20 @@ export default function UsersList() {
       {/* Modelo a mostrar */}
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>nombre evento</Modal.Title>
+          <Modal.Title>Datos del usuario @{user.uname}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
+          <div className="center">
+            <Card.Img variant="top" src={Profile} className="imgRedonda center" />
+          </div>
+          <div className="center">
+            <Card.Link>Resetear imagen</Card.Link>
+          </div>
           <Form>
             {/* Nombre */}
             <Form.Group as={Row} controlId="formPlaintextName">
               <Form.Label column sm="2">
-                Nombre
+                Nombre:
               </Form.Label>
               <Col sm="10">
                 <Form.Control plaintext readOnly defaultValue={user.name + " " + user.lname} />
@@ -108,7 +119,7 @@ export default function UsersList() {
             {/* User */}
             <Form.Group as={Row} controlId="formPlaintextUser">
               <Form.Label column sm="2">
-                Usuario
+                Usuario:
               </Form.Label>
               <Col sm="10">
                 <Form.Control plaintext readOnly defaultValue={"@" + user.uname} />
@@ -117,7 +128,7 @@ export default function UsersList() {
             {/* Birthday */}
             <Form.Group as={Row} controlId={"formPlaintextBirthday"}>
               <Form.Label column sm="2">
-                F.Nac.
+                F.Nac.:
               </Form.Label>
               <Col sm="10">
                 <Form.Control plaintext readOnly defaultValue={user.bt} />
@@ -126,7 +137,7 @@ export default function UsersList() {
             {/* Email */}
             <Form.Group as={Row} controlId="formPlaintextEmail">
               <Form.Label column sm="2">
-                Email
+                Email:
               </Form.Label>
               <Col sm="10">
                 <Form.Control plaintext readOnly defaultValue={user.mail} />
@@ -135,40 +146,36 @@ export default function UsersList() {
             {/* Genero */}
             <Form.Group as={Row} controlId="formPlaintextGendre">
               <Form.Label column sm="2">
-                Genero
+                Genero:
               </Form.Label>
               <Col sm="10">
                 <Form.Control plaintext readOnly defaultValue={user.gendre} />
               </Col>
             </Form.Group>
             {/* Servicios */}
-            <Form.Group as={Row} controlId="formServ">
-              <Form.Label column sm="5">
-                Gest Servicios
-              </Form.Label>
-              <Col sm="7">
-                <Form.Control plaintext readOnly defaultValue={Switch} />
-              </Col>
-            </Form.Group>
-            {/* Noticias */}
-            <Form.Group as={Row} controlId="formServ">
-              <Form.Label column sm="5">
-                Gest Noticias
-              </Form.Label>
-              <Col sm="7">
-                <Form.Control plaintext readOnly defaultValue={Switch} />
-              </Col>
-            </Form.Group>
-            {/* Eventps */}
-            <Form.Group as={Row} controlId="formServ">
-              <Form.Label column sm="5">
-                Gest Eventos
-              </Form.Label>
-              <Col sm="7">
-                <Form.Control plaintext readOnly defaultValue={Switch} />
-              </Col>
+            <h6>Permisos:</h6>
+            <Form.Group>
+              <div className="center">
+                <Form.Check
+                  type="checkbox"
+                  id=""
+                  label="Noticias  "
+                />
+                <Form.Check
+                  type="checkbox"
+                  id=""
+                  label="Usuarios  "
+                />
+                <Form.Check
+                  type="checkbox"
+                  id=""
+                  label="Eventos  "
+                />
+              </div>
+
             </Form.Group>
             <a href="">Resetear passwd</a>
+            <div><a href="">Deshabilitar usuario</a></div>
           </Form>
         </Modal.Body>
         <Modal.Footer>
