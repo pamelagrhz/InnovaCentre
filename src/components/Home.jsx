@@ -25,37 +25,10 @@ export default function Home() {
     <div>
       <Stars></Stars>
       <Wave></Wave>
-      <div className="bg-card divided-color">
-        Nuestros servicios
-  <Parallax speed={2}>
-          <div className="app1">
-            {/* Servicios */}
-            <div className="med-size">
-              <Parallax speed={5}>
-                <h3>¿Que serviciospuedes encontrar en InnovaCentre?</h3>
-                <h4 className="">Marketing </h4>
-              </Parallax>
-              <Parallax speed={2}>
-                <h4 className="">Procesos </h4>
-              </Parallax>
-              <Parallax speed={1}>
-                <h4 className="">Digitales </h4>
-              </Parallax>
-              <br />
-              <Button variant="danger" size="lg">Boton  </Button>
-            </div>
-            <div className="med-size">
-              <Parallax speed={0}>
-                <img src={Desk} alt="" className="" />
-              </Parallax>
-            </div>
-          </div>
-        </Parallax>
-      </div>
       <div className="color-ch ">
         <h3>Entra a nuestro blog</h3>
         <p>Conoce más sobre noticias y nuestra comunidad. </p>
-        <img src={Blog} alt="" className="" />
+        <img src={Blog} alt="" className="blue-logo" />
         <div>
           <Button>Ir al blog</Button>
         </div>
@@ -167,43 +140,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-
-      <Carousel>
-        <Carousel.Item interval={1000}>
-          <img
-            className="d-block w-100"
-            src={Desktop}
-            alt="First slide"
-          />
-          <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item interval={500}>
-          <img
-            className="d-block w-100"
-            src={IPad}
-            alt="Third slide"
-          />
-          <Carousel.Caption className="white-shadow ">
-            <h3 >Quiero organizar mi propio evento</h3>
-            <p>Si lo que buscas es ser un organizador de eventos, contactate con nosotros y te guiaremos en el proceso</p>
-            <Button>Contactar</Button>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src={Build}
-            alt="Third slide"
-          />
-          <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-      </Carousel>
     </div >
   )
 }

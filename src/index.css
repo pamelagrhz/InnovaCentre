@@ -54,6 +54,8 @@ a.black {
     width: 100%;
     margin: auto;
     justify-items: flex-start;
+    display: flex;
+    flex-direction: row;
 }
 
 .med-size {
@@ -143,6 +145,10 @@ a.white {
 
 .white-shadow {
     text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+.card {
+    margin-top: 7em!important;
 }
 
 .card,
@@ -239,6 +245,7 @@ a.white {
 @media only screen and (max-width: 620px) {
     .card {
         width: 90% !important;
+        margin-top: 7em!important;
     }
     .mini-card {
         flex-direction: row;
@@ -412,6 +419,15 @@ a.white {
         margin-top: 0em;
         transform: rotate(0deg);
         width: 100%;
+    }
+    .app1 {
+        flex-direction: column;
+    }
+    .med-size {
+        width: 100%;
+    }
+    .color-ch {
+        padding: 9%;
     }
 }
 
