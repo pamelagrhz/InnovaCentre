@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Modal, Card, Row, Col, Badge, Button, Nav, Form, FormControl, NavDropdown, Tab, Tabs } from 'react-bootstrap';
+import { Navbar, Modal, Card, Row, Col, Badge, Button, Nav, Form, FormControl, NavDropdown, Tab, Tabs } from 'react-bootstrap';
 import Profile from '../../Assets/img/profile.jpeg'
 import Switch from '../StyleComponent/Switch'
 
@@ -37,10 +37,23 @@ export default function UsersList() {
 
   return (
     <div>
-      <h2>Gestión de usuarios</h2>
+      <br/>
+      <h2 className='title'>Gestión de usuarios</h2>
       {/* Filtro */}
       <Tabs defaultActiveKey="Estudiantes" className="black" transition={false} id="noanim-tab-example">
-        <Tab eventKey="home" className="black" title="Home">
+    
+        <Tab eventKey="Estudiantes" className="black" title="Estudiantes">
+        <>
+      <Navbar bg="light" variant="light">
+    <Navbar.Brand href="#home"></Navbar.Brand>
+    <Nav className="mr-auto">
+    </Nav>
+    <Form inline>
+      <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+      <Button variant="outline-primary">Search</Button>
+    </Form>
+  </Navbar>
+  </>
           {/* Usuarios */}
           <Card className="leftcard mini-card user-list">
             <div className="center">
@@ -84,9 +97,31 @@ export default function UsersList() {
           </Card>
         </Tab>
         <Tab eventKey="profile" title="Profile">
+        <>
+      <Navbar bg="light" variant="light">
+    <Navbar.Brand href="#home"></Navbar.Brand>
+    <Nav className="mr-auto">
+    </Nav>
+    <Form inline>
+      <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+      <Button variant="outline-primary">Search</Button>
+    </Form>
+  </Navbar>
+  </>
           some
         </Tab>
         <Tab eventKey="contact" title="Contact">
+        <>
+      <Navbar bg="light" variant="light">
+    <Navbar.Brand href="#home"></Navbar.Brand>
+    <Nav className="mr-auto">
+    </Nav>
+    <Form inline>
+      <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+      <Button variant="outline-primary">Search</Button>
+    </Form>
+  </Navbar>
+  </>
           some
         </Tab>
       </Tabs>
@@ -154,26 +189,31 @@ export default function UsersList() {
             </Form.Group>
             {/* Servicios */}
             <h6>Permisos:</h6>
-            <Form.Group>
-              <div className="center">
-                <Form.Check
-                  type="checkbox"
-                  id=""
-                  label="Noticias  "
-                />
-                <Form.Check
-                  type="checkbox"
-                  id=""
-                  label="Usuarios  "
-                />
-                <Form.Check
-                  type="checkbox"
-                  id=""
-                  label="Eventos  "
-                />
-              </div>
+            <Form>
+                {['checkbox'].map((type) => (
+                  <div className="row center">
+                    <Form.Check
+                      disabled checked
+                      type="checkbox"
+                      id="UsersPermits"
+                      label="Users"
+                    />
 
-            </Form.Group>
+                    <Form.Check
+                      disabled
+                      type="checkbox"
+                      label="Events"
+                      id="EventsPermits"
+                    />
+                    <Form.Check
+                      disabled checked
+                      type="checkbox"
+                      id="NewsPermits"
+                      label="News"
+                    />
+                  </div>
+                ))}
+              </Form>
             <a href="">Resetear passwd</a>
             <div><a href="">Deshabilitar usuario</a></div>
           </Form>

@@ -245,7 +245,6 @@ a.white {
 @media only screen and (max-width: 620px) {
     .card {
         width: 90% !important;
-        margin-top: 7em!important;
     }
     .mini-card {
         flex-direction: row;
@@ -292,6 +291,13 @@ a.white {
 .imgRedonda {
     width: 20vh;
     height: 20vh;
+    border-radius: 150px !important;
+    border: 1px solid black;
+}
+
+.small-round {
+    width: 10vh;
+    height: 10vh;
     border-radius: 150px !important;
     border: 1px solid black;
 }
@@ -433,4 +439,28 @@ a.white {
 
 .landing {
     background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
+}
+
+.user-menu-data {
+    margin-top: 6px;
+    color: rgb(104, 104, 104);
+    border-bottom: solid rgb(53, 53, 53) 1px;
+    line-height: 5px;
+}
+
+.nav-link {
+    color: rgb(49, 48, 48)!important;
+}
+
+.Following {
+    background-color: rgb(220, 220, 245);
+    padding: 1em;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    margin: 1em
+}
+
+.org {
+    min-width: 10em;
 }

@@ -1,11 +1,9 @@
-.menu {
-    display: flex;
-    justify-content: flex-end;
-}
+.menu {}
 
 nav.user-menu {
-    width: 15em;
-    height: 100%;
+    text-align: left;
+    padding: 1em;
+    min-height: 100%;
     /* margin: auto 5%; */
     background-color: black!important;
 }

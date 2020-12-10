@@ -27,8 +27,14 @@ export default function EditProfile() {
       <Card>
         <Card.Header>Mi información</Card.Header>
         <Card.Body>
+          <div className="center">
+          <Card.Img  className="imgRedonda" src={Profile}></Card.Img>
+          </div>
           <Card.Text>
             <Form>
+            <Form.Group>
+    <Form.File id="exampleFormControlFile1" label="Subir una nueva foto" />
+  </Form.Group>
               {/* Nombre */}
               <Form.Group as={Row} controlId="formPlaintextName">
                 <Form.Label column sm="4">
@@ -75,32 +81,7 @@ export default function EditProfile() {
                 </Col>
               </Form.Group>
               {/* Servicios */}
-              <Form.Group as={Row} controlId="formServ">
-                <Form.Label column sm="5">
-                  Gest Servicios
-</Form.Label>
-                <Col sm="6">
-                  <Form.Control plaintext readOnly defaultValue="some" />
-                </Col>
-              </Form.Group>
-              {/* Noticias */}
-              <Form.Group as={Row} controlId="formServ">
-                <Form.Label column sm="5">
-                  Gest Noticias
-</Form.Label>
-                <Col sm="6">
-                  <Form.Control plaintext readOnly defaultValue="some" />
-                </Col>
-              </Form.Group>
-              {/* Eventps */}
-              <Form.Group as={Row} controlId="formServ">
-                <Form.Label column sm="5">
-                  Gest Eventos
-</Form.Label>
-                <Col sm="6">
-                  <Form.Control plaintext readOnly defaultValue="some" />
-                </Col>
-              </Form.Group>
+              
               <a href="">Resetear passwd</a>
             </Form>
           </Card.Text>
