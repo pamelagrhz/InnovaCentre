@@ -1,16 +1,27 @@
 
 import React from 'react';
-import { Navbar, Nav, NavDropdown, Card, Form, Button, Col, Container, Row } from 'react-bootstrap';
+import {Navbar, Nav, NavDropdown, Card, Form, Button, Col, Container, Row } from 'react-bootstrap';
 import Network from '../../Assets/img/network.png'
 
 export default function NavBar() {
   return (
     <div className="landing">
-      <h1>Página web
+      <Container>
+  <Row>
+    <Col>
+    <h1>Página web
       </h1>
       <p className="black">Una Página web es un medio digital para promover productos, servicios o información de interés, se consultan a través de una computadora, tableta o Smartphone.</p>
       <p>También es una herramienta valiosa de mercadotecnia para cualquier empresa que requiera de obtener nuevos clientes promoviendo productos o servicios.</p>
-      <h2>Clasificación de páginas web</h2>
+      
+    </Col>
+    <Col md="auto">Variable width content</Col>
+    <Col xs lg="2">
+      3 of 3
+    </Col>
+  </Row>
+</Container>
+     <h2>Clasificación de páginas web</h2>
       <br />
       <h3>PÁGINAS WEB ESTÁTICAS</h3>
       <p>Son sitios pequeños que contienen poca información, no cuentan con gestor de contenido y su uso más común es como folletos virtuales de algún servicio o productos.</p>

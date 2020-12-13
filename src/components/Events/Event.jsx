@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import defaultEvent from './../../Assets/img/defaultEvent.jpg';
 import maps from './../../Assets/img/maps.jpeg';
+import { faCheck} from '@fortawesome/free-solid-svg-icons';
 
 
 export default function Event() {
@@ -29,6 +30,7 @@ export default function Event() {
   const EventCost = `$ ${EventPrice} MXN`;
   const EventDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nibh purus, elementum ac lacinia id, viverra nec nulla. Cras dapibus arcu a est rutrum ultrices. Vivamus pharetra commodo suscipit. Cras ultricies sollicitudin nisi ut vehicula. Nam quis tortor dignissim, faucibus risus vel, varius urna. Morbi feugiat enim ac purus bibendum congue.";
 
+  var Following ="Siguiendo ";
 
   return (
     <div>
@@ -40,7 +42,8 @@ export default function Event() {
           <Card.Text>
             <h4>{EventName}</h4>
           </Card.Text>
-          <Card.Link className="linkButton" href="#" onClick={handleShow}>Ver más</Card.Link>
+          <Card.Link className="linkButton" href="#" onClick={handleShow}>Ver más   </Card.Link>
+          <Button  size="sm" variant="success"><FontAwesomeIcon icon={faCheck} /><FontAwesomeIcon /></Button>
         </Card.Body>
       </Card>
 

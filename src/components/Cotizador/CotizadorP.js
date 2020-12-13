@@ -1,5 +1,5 @@
 import React from 'react';
-import '../Styles/cotizadorStyless.css';
+import '../../Styles/styles.css'
 import logo from '../../Assets/img/world.png'
 
 export default function Cotizador(){
