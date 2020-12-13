@@ -33,3 +33,7 @@
     width: 15rem;
     height: 15rem;
 }
+
+.landing .row {
+    padding: 5% 0;
+}

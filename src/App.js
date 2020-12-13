@@ -10,8 +10,9 @@ import EventAdd from "./components/Events/EventAdd";
 import Home from "./components/Home";
 import UsersList from "./components/Admin/UsersList";
 import Cotizador from "./components/Cotizador/CotizadorP";
-import Landing from "./components/Landing/WebPage";
+import WebPage from "./components/Landing/WebPage";
 import "./App.css";
+import RAapp from "./components/Landing/RAapp.jsx";
 
 function App() {
   return (
@@ -23,11 +24,20 @@ function App() {
             <Route path="/home">
               <Home />
             </Route>
+            {/* Landings */}
             <Route path="/webpage">
-              <Landing />
+              <WebPage />
             </Route>
+            <Route path="/RAapp">
+              <RAapp/>
+            </Route>
+            {/* Admin */}
             <Route path="/users-list">
               <UsersList />
+            </Route>
+            {/* User */}
+            <Route path="/perfil">
+              <Perfil />
             </Route>
             <Route path="/signin">
               <SignIn />
@@ -38,12 +48,11 @@ function App() {
             <Route path="/event">
               <Events />
             </Route>
+            {/* Organizador */}
             <Route path="/eventadd">
               <EventAdd />
             </Route>
-            <Route path="/perfil">
-              <Perfil />
-            </Route>
+
             <Route path="/cotizador">
               <Cotizador />
             </Route>

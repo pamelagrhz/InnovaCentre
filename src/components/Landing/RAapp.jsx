@@ -6,16 +6,22 @@ import WP from '../../Assets/img/landingweb/background-047.png'
 import Static from '../../Assets/img/landingweb/greenweb.png'
 import Dynamic from '../../Assets/img/landingweb/codeweb.png'
 import WebPage from '../../Assets/img/landingweb/webpage.png'
+import RABanner from '../../Assets/img/landingAR/RABanner.png'
+import PockemonGo1 from '../../Assets/img/landingAR/pokgo.png'
+
+import PockemonGo2 from '../../Assets/img/landingAR/pokgosnor.png'
 
 
-export default function WebPageLanding() {
+export default function RAapp() {
   return (
     <div className="landing">
+      <img src={RABanner} alt=""/>
 <div className="landing-content normal">
   <div className="medium-size left-txt">
-  <h2 className="blue-txt ">Página web
+    
+  <h2 className="blue-txt ">Realidad Aumentada
       </h2>
-      <p className="black">Una Página web es un medio digital para promover productos, servicios o información de interés, se consultan a través de una computadora, tableta o Smartphone.</p>
+      <p className="black">La Realidad Aumentada (RA) es una tecnología que permite superponer elementos virtuales sobre nuestra visión de la realidad. Cada vez más demandada, en 2020 se convertirá en un negocio que roce los 120.000 millones de dólares a nivel mundial.</p>
       <p>También es una herramienta valiosa de mercadotecnia para cualquier empresa que requiera de obtener nuevos clientes promoviendo productos o servicios.</p>
       
   </div>
@@ -24,17 +30,17 @@ export default function WebPageLanding() {
   </div>
 </div>
 
-<h1 className="blue-txt">Clasificación de páginas web</h1>
+<h1 className="blue-txt">Ejemplo de app de RA (Realidad Aumentada)</h1>
       <br />
 
   <div className="landing-content normal">
     <div className="medium-size left-txt">
-    <h3 className="blue-txt">PÁGINAS WEB ESTÁTICAS</h3>
-      <p>Son sitios pequeños que contienen poca información, no cuentan con gestor de contenido y su uso más común es como folletos virtuales de algún servicio o productos.</p>
+    <h3 className="blue-txt">Pockemon GO</h3>
+      <p>Surgía entonces y no en el verano de 2016, como muchos creemos, cuando nos vimos contagiados por la fiebre de Pokémon GO, un videojuego que consistía en buscar y capturar diferentes personajes de la saga japonesa y que, en su momento más álgido, alcanzó la astronómica cifra de 45 millones de usuarios diarios activos.</p>
       <br />
       </div>
       <div className="landing-image">
-        <img src={Static} alt=""/>
+        <img src={PockemonGo1} alt=""/>
       </div>
   </div>    
 
@@ -42,19 +48,21 @@ export default function WebPageLanding() {
   <div className="landing-content reverse">
    
       <div className="landing-image">
-        <img src={Dynamic} alt=""/>
+        <img src={PockemonGo2} alt=""/>
       </div>
       <div className="medium-size left-txt">
-    <h3 className="blue-txt">PÁGINAS WEB DINÁMICAS</h3>
-      <p>Son sitios pequeños que cuentan con un gestor de contenido que permite al administrador del sitio modificar la información en cualquier momento sin contar con conocimientos de programación y diseño.</p>
+      <p>Pokémon GO popularizó la RA, la acercó al gran público —a todos los públicos—, pero por aquel entonces ya eran muchas las empresas de muy diversos sectores (sanidad, educación, arquitectura, servicios, retail, etc.) que la empezaban a utilizar con el objetivo de crear experiencias de valor para sus clientes.
+
+</p>
       <br />
       </div>
   </div>    
      
   <div className="landing-content">
     <div className="landing-text">
-    <h3 className="blue-txt">PÁGINAS WEB AUTOADMINISTRABLES</h3>
-      <p>Son sitios que pueden tener pequeñas o grandes cantidades de información, se construyen mediante un CMS (Sistema de Gestión de Contenidos), algunos de los más populares son: Wordpress y Joomla, cuentan con diversas aplicaciones como son: foros, formularios de contacto, suscripción a noticias, chats, etc., tienen un administrador general que a su ves puede autorizar a otros usuarios a administrar ciertas secciones de la pagina.</p>
+    <h3 className="blue-txt">DIFERENCIAS ENTRE LA REALIDAD AUMENTADA Y LA REALIDAD VIRT</h3>
+      <p>A pesar de estar entrelazadas, plantean revoluciones diferentes. Mientras que la Realidad Virtual permite crear un mundo virtual desde cero con todo lo que queramos, pero un mundo fantástico, lo que hace la Realidad Aumentada es agregar elementos virtuales (información adicional en forma de gráficos o imágenes) a nuestro entorno real.</p>
+    <p>El director ejecutivo de Apple, Tim Cook, lo tiene muy claro: "La Realidad Aumentada (RA) abarca más que la Realidad Virtual (VR) porque nos da la posibilidad de estar presentes y de comunicarnos y, simultáneamente, de disfrutar de otras cosas a nivel visual. Será la próxima revolución, como en su momento lo fue el smartphone".</p>
       </div>
       <div className="landing-image">
         <img src="" alt=""/>
