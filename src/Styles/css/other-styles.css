@@ -336,10 +336,10 @@ a.white {
     width: 80%;
 }
 
-
-/* .landing {
-     background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%); 
-}  */
+.landing {
+    padding: 6% 0;
+    /* background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);  */
+}
 
 .user-menu-data {
     margin-top: 6px;
@@ -363,24 +363,26 @@ a.white {
 
 .landing h2,
 h3 {
+    font-family: Open Sans, sans-serif;
     font-size: 1.5em;
     margin-bottom: 3%;
 }
 
 .blue-txt {
-    color: blue!important;
+    color: black!important;
+    font-weight: 700;
 }
 
 .landing p {
     color: black;
-    font-size: 1em;
+    font-size: 1.3rem;
 }
 
 .landing .landing-content {
     display: flex;
     flex-direction: row;
     align-items: center!important;
-    padding: 5% 6%;
+    padding: 4% 3%;
 }
 
 .left-txt {
@@ -389,10 +391,6 @@ h3 {
 
 .rigth-txt {
     text-align: end;
-}
-
-.landing-text {
-    width: 100%;
 }
 
 .landing .landing-content .landing-txt {
@@ -409,7 +407,7 @@ h3 {
 
 .landing-content .medium-size,
 .landing-content .mini-size {
-    width: 50%;
+    width: 70%;
     display: flex;
     margin: 0 3%;
     align-self: center;
@@ -423,4 +421,22 @@ h3 {
 
 .landing-content .mini-size {
     width: 40%;
+}
+
+.thousand-porcent-size {
+    width: 100%;
+}
+
+.fifty-porcent-size {
+    width: 50%;
+}
+
+.flex-cards {
+    display: flex;
+}
+
+.flex-cards .card {
+    background-color: #ffffff;
+    width: 30%;
+    border: none;
 }

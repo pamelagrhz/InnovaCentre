@@ -1,21 +1,21 @@
-
 import React from 'react';
 import {Navbar, Nav, NavDropdown, Card, Form, Button, Col, Container, Row } from 'react-bootstrap';
-import Network from '../../Assets/img/network.png'
 import WP from '../../Assets/img/landingweb/background-047.png'
 import Static from '../../Assets/img/landingweb/greenweb.png'
 import Dynamic from '../../Assets/img/landingweb/codeweb.png'
 import WebPage from '../../Assets/img/landingweb/webpage.png'
 import RABanner from '../../Assets/img/landingAR/RABanner.png'
 import PockemonGo1 from '../../Assets/img/landingAR/pokgo.png'
+import LandingForm from '../StyleComponent/LandingForm'
 
 import PockemonGo2 from '../../Assets/img/landingAR/pokgosnor.png'
 
 
 export default function RAapp() {
   return (
+    <div>
     <div className="landing">
-      <img src={RABanner} alt=""/>
+      <img  className="thousand-porcent-size" src={RABanner} alt=""/>
 <div className="landing-content normal">
   <div className="medium-size left-txt">
     
@@ -60,7 +60,7 @@ export default function RAapp() {
      
   <div className="landing-content">
     <div className="landing-text">
-    <h3 className="blue-txt">DIFERENCIAS ENTRE LA REALIDAD AUMENTADA Y LA REALIDAD VIRT</h3>
+    <h3 className="blue-txt">DIFERENCIAS ENTRE LA REALIDAD AUMENTADA Y LA REALIDAD VIRTUAL</h3>
       <p>A pesar de estar entrelazadas, plantean revoluciones diferentes. Mientras que la Realidad Virtual permite crear un mundo virtual desde cero con todo lo que queramos, pero un mundo fantástico, lo que hace la Realidad Aumentada es agregar elementos virtuales (información adicional en forma de gráficos o imágenes) a nuestro entorno real.</p>
     <p>El director ejecutivo de Apple, Tim Cook, lo tiene muy claro: "La Realidad Aumentada (RA) abarca más que la Realidad Virtual (VR) porque nos da la posibilidad de estar presentes y de comunicarnos y, simultáneamente, de disfrutar de otras cosas a nivel visual. Será la próxima revolución, como en su momento lo fue el smartphone".</p>
       </div>
@@ -68,72 +68,35 @@ export default function RAapp() {
         <img src="" alt=""/>
       </div>
   </div> 
-  <div className="landing-content normal">
-    <div className=" mini-size">
-    <h3 className="blue-txt">CATALOGOS VIRTUALES</h3>
-      <p>Son sitios web que permiten la publicación de imágenes y características que corresponden a productos, pueden ser modificados constantemente en base a las necesidades del administrador.</p>
-      <h3 className="blue-txt">TIENDAS VIRTUALES</h3>
-      <p>Son sitios que permiten la publicación de productos o servicios y que pueden ser adquiridos en línea mediante la realización de un pago a través de transacciones electrónicas, cuentan con catalogo de productos, carrito de compras y gestor de pagos.</p>
-      <h3 className="blue-txt">PORTALES</h3>
-      <p>Son grandes sitios de internet que contienen mucha información ordenada mediante categorías, pueden incorporar chats, foros, noticias, buscador y múltiples servicios en línea.
-</p>
+<div className="flex-cards">
+<Card>
+  <Card.Title>CATALOGOS VIRTUALES</Card.Title>
+  <Card.Body>
+  Son sitios web que permiten la publicación de imágenes y características que corresponden a productos, pueden ser modificados constantemente en base a las necesidades del administrador.
+  </Card.Body>
+</Card>
+<Card>
+  
+  <Card.Title>TIENDAS VIRTUALES</Card.Title>
+  <Card.Body>
+Son sitios que permiten la publicación de productos o servicios y que pueden ser adquiridos en línea mediante la realización de un pago a través de transacciones electrónicas, cuentan con catalogo de productos, carrito de compras y gestor de pagos.
+</Card.Body>
+</Card>
+
+<Card>
+  <Card.Title>PORTALES</Card.Title>
+  <Card.Body>
+  Son grandes sitios de internet que contienen mucha información ordenada mediante categorías, pueden incorporar chats, foros, noticias, buscador y múltiples servicios en línea.
+  </Card.Body>
+</Card>
+
+</div>
+
+  <div className="medium-size">
+        <img  className="fifty-porcent-size" src={WebPage} alt=""/>
       </div>
-      <div className="medium-size">
-        <img src={WebPage} alt=""/>
       </div>
-  </div> 
-
-  <div className="landing-content">
-    <div className="landing-text">
-      </div>
-      <div className="landing-image">
-        <img src="" alt=""/>
-      </div>
-  </div> 
-
-      
-      
-
-      <div className="client-div">
-
-        <Form className="client-form">
-          <h2>Contactanos</h2>
-          <Form.Group controlId="formGroupName">
-            <Form.Label>Nombre*</Form.Label>
-            <Form.Control type="text" placeholder="Name" />
-          </Form.Group>
-          <Form.Group controlId="formGroupEmail">
-            <Form.Label>Correo*</Form.Label>
-            <Form.Control type="email" placeholder="Enter email" />
-          </Form.Group>
-          <Form.Group controlId="formGroupPhone">
-            <Form.Label>Telefono*</Form.Label>
-            <Form.Control type="number" placeholder="55-55-55-55-55" />
-          </Form.Group>
-          <Form.Group controlId="formGroupName">
-            <Form.Label>Empresa/Escuela</Form.Label>
-            <Form.Control type="text" placeholder="Empresa/Escuela" />
-          </Form.Group>
-          <Form.Group as={Col} controlId="formGridState">
-            <Form.Label>Servicio de interés</Form.Label>
-            <Form.Control as="select" defaultValue="Choose...">
-              <option>Pagina web </option>
-              <option>App Movil</option>
-              <option>Diseño grafico </option>
-            </Form.Control>
-          </Form.Group>
-          <Form.Text className="text-muted">
-            * Campos obligatorios
-    </Form.Text>
-          <Button variant="primary" type="submit">
-            Submit
-  </Button>
-        </Form>
-        <span className="contact-us"><img src={Network} alt="" /></span>
-
-      </div>
-
+     <LandingForm/> 
     </div >
-
   )
 }
