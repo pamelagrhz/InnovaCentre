@@ -52,38 +52,33 @@ export default function WebPageLanding() {
       <br />
       </div>
   </div>    
-     
-  <div className="landing-content">
-    <div className="landing-text">
-    <h3 className="blue-txt">PÁGINAS WEB AUTOADMINISTRABLES</h3>
-      <p>Son sitios que pueden tener pequeñas o grandes cantidades de información, se construyen mediante un CMS (Sistema de Gestión de Contenidos), algunos de los más populares son: Wordpress y Joomla, cuentan con diversas aplicaciones como son: foros, formularios de contacto, suscripción a noticias, chats, etc., tienen un administrador general que a su ves puede autorizar a otros usuarios a administrar ciertas secciones de la pagina.</p>
-      </div>
-      <div className="landing-image">
-        <img src="" alt=""/>
-      </div>
-  </div> 
-  <div className="landing-content normal">
-    <div className=" mini-size">
-    <h3 className="blue-txt">CATALOGOS VIRTUALES</h3>
-      <p>Son sitios web que permiten la publicación de imágenes y características que corresponden a productos, pueden ser modificados constantemente en base a las necesidades del administrador.</p>
-      <h3 className="blue-txt">TIENDAS VIRTUALES</h3>
-      <p>Son sitios que permiten la publicación de productos o servicios y que pueden ser adquiridos en línea mediante la realización de un pago a través de transacciones electrónicas, cuentan con catalogo de productos, carrito de compras y gestor de pagos.</p>
-      <h3 className="blue-txt">PORTALES</h3>
-      <p>Son grandes sitios de internet que contienen mucha información ordenada mediante categorías, pueden incorporar chats, foros, noticias, buscador y múltiples servicios en línea.
-</p>
-      </div>
-      <div className="medium-size">
-        <img src={WebPage} alt=""/>
-      </div>
-  </div> 
+  <div className="flex-cards">
+<Card>
+  <Card.Title>CATALOGOS VIRTUALES</Card.Title>
+  <Card.Body>
+  Son sitios web que permiten la publicación de imágenes y características que corresponden a productos, pueden ser modificados constantemente en base a las necesidades del administrador.
+  </Card.Body>
+</Card>
+<Card>
+  
+  <Card.Title>TIENDAS VIRTUALES</Card.Title>
+  <Card.Body>
+Son sitios que permiten la publicación de productos o servicios y que pueden ser adquiridos en línea mediante la realización de un pago a través de transacciones electrónicas, cuentan con catalogo de productos, carrito de compras y gestor de pagos.
+</Card.Body>
+</Card>
 
-  <div className="landing-content">
-    <div className="landing-text">
-      </div>
-      <div className="landing-image">
-        <img src="" alt=""/>
-      </div>
-  </div> 
+<Card>
+  <Card.Title>PORTALES</Card.Title>
+  <Card.Body>
+  Son grandes sitios de internet que contienen mucha información ordenada mediante categorías, pueden incorporar chats, foros, noticias, buscador y múltiples servicios en línea.
+  </Card.Body>
+</Card>
+
+</div>
+
+  <div className="medium-size">
+        <img  className="fifty-porcent-size" src={WebPage} alt=""/>
+      </div> 
 <LandingForm/>
     </div >
   )

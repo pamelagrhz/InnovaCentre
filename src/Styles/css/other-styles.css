@@ -163,9 +163,8 @@ a.white {
     width: 50vh !important;
 }
 
-.miniEventos {
+div.miniEventos {
     display: flex;
-    flex-direction: row;
 }
 
 .contact-icons {

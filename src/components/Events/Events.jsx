@@ -40,21 +40,7 @@ export default function Events() {
         <Event />
         <Event />
       </div >
-      <div>
-        <Card className="leftcard ">
-          <Card.Img variant="top" src={defaultEvent} />
-          <Card.Body>
-            <Card.Title>{EventDate} {EventHour}</Card.Title>
-            <Card.Title>Nickname</Card.Title>
-            <Card.Subtitle className="mb-2 text-muted">{EventOrg}</Card.Subtitle>
-            <Card.Text>
-              <h4>{EventName}</h4>
-            </Card.Text>
-            <Card.Link className="linkButton" href="#" onClick={handleShow}>Editar</Card.Link>
-          </Card.Body>
-        </Card>
-      </div>
-
+      
     </div>
   )
 }

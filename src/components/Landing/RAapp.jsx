@@ -68,33 +68,7 @@ export default function RAapp() {
         <img src="" alt=""/>
       </div>
   </div> 
-<div className="flex-cards">
-<Card>
-  <Card.Title>CATALOGOS VIRTUALES</Card.Title>
-  <Card.Body>
-  Son sitios web que permiten la publicación de imágenes y características que corresponden a productos, pueden ser modificados constantemente en base a las necesidades del administrador.
-  </Card.Body>
-</Card>
-<Card>
-  
-  <Card.Title>TIENDAS VIRTUALES</Card.Title>
-  <Card.Body>
-Son sitios que permiten la publicación de productos o servicios y que pueden ser adquiridos en línea mediante la realización de un pago a través de transacciones electrónicas, cuentan con catalogo de productos, carrito de compras y gestor de pagos.
-</Card.Body>
-</Card>
 
-<Card>
-  <Card.Title>PORTALES</Card.Title>
-  <Card.Body>
-  Son grandes sitios de internet que contienen mucha información ordenada mediante categorías, pueden incorporar chats, foros, noticias, buscador y múltiples servicios en línea.
-  </Card.Body>
-</Card>
-
-</div>
-
-  <div className="medium-size">
-        <img  className="fifty-porcent-size" src={WebPage} alt=""/>
-      </div>
       </div>
      <LandingForm/> 
     </div >
