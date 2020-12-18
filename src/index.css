@@ -1,4 +1,5 @@
-@import './Styles/styles.css':root {
+@import './Styles/styles.css';
+root {
     --principal: #1f0d81;
     --yellow: #e6bd08;
 }
