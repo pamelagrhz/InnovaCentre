@@ -25,28 +25,43 @@ export default function SignIn() {
         <Card.Header className="py-3 bg-innova">Iniciar sesión</Card.Header>
         <Card.Body>
           <Form>
+
+            {/* Email */}
             <Form.Group controlId="formEmail">
               <Form.Label>Email</Form.Label>
               <Form.Control type="email" placeholder="Enter email" />
             </Form.Group>
 
+            {/* Contraseña */}
             <Form.Group controlId="formPassword">
               <Form.Label>Contraseña</Form.Label>
               <Form.Control type="password" placeholder="Password" />
-
             </Form.Group>
+
+            {/* Checkbox */}
             <Form.Group controlId="formCheckbox">
+
+              {/* Hipervinculos  */}
               <a className="SigninLink" href="/signout">Aun no tengo una cuenta. /</a>
               <a className="SigninLink" onClick={handleShow}>Olvidé mi contraseña.</a>
 
+              {/* Checkbox para recordar al usuario (aun no implementado) */}
               <Form.Check type="checkbox" label="Recuerdame" />
             </Form.Group>
+
+            {/* Ingresar (boton) */}
             <Button variant="primary" type="submit" block>
               Ingresar
-  </Button>
+            </Button>
           </Form>
         </Card.Body>
       </Card>
+
+
+
+{/* Intento de despliegue para recuperacion de contraseña */}
+
+
       {/* Mostrar*/}
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>

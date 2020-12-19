@@ -1,13 +1,9 @@
 import React, { useState } from 'react';
-import { Modal, Card, Image, Badge, Button } from 'react-bootstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
-import defaultEvent from './../../Assets/img/defaultEvent.jpg';
-import maps from './../../Assets/img/maps.jpeg';
 import Event from './Event'
 
 
 export default function Events() {
+  
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -20,21 +16,12 @@ export default function Events() {
     return color;
   }
 
-  const EventName = "Business Intelligence ";
-  const EventDate = "Mier 3 Oct";
-  const EventYear = "2020";
-  const EventHour = "12:30hr";
-  const EventOrg = "IBM";
-  const EventLocation = " Av. Té 950, Granjas México, Iztacalco, 08400 Ciudad de México, CDMX ";
-  const EventPrice = "899";
-  const EventCost = `$ ${EventPrice} MXN`;
-  const EventDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nibh purus, elementum ac lacinia id, viverra nec nulla. Cras dapibus arcu a est rutrum ultrices. Vivamus pharetra commodo suscipit. Cras ultricies sollicitudin nisi ut vehicula. Nam quis tortor dignissim, faucibus risus vel, varius urna. Morbi feugiat enim ac purus bibendum congue.";
-
-
+  
   return (
     <div>
       <h1>Eventos</h1>
       <div className="miniEventos">
+        {/* MANDAMOS A LLAMAR AL COMPONENTE EVENT X VECES */}
         <Event />
         <Event />
         <Event />
