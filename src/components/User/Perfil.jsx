@@ -29,7 +29,7 @@ export default function Perfil() {
     <div className='sign-in'>
 
       <Tab.Container id="left-tabs-example" defaultActiveKey="editProfile">
-
+          {/* Mandamos a llamar al componente userMenu */}
         <UserMenu />
 
         <Tab.Content>
@@ -37,32 +37,32 @@ export default function Perfil() {
             <h1>Mis eventos</h1>
 
             <Tabs defaultActiveKey="Pendientes"  class="black" id="uncontrolled-tab-example">
-  <Tab eventKey="Pendientes"  title="Pendientes">
-    <h4>Pendientes</h4>
-    <Event/>
-  </Tab>
-  <Tab eventKey="Pasados" title="Pasados">
-  <h4>Pasados</h4>
-    <Event/>
-  </Tab>
-  <Tab eventKey="Cancelados" title="Cancelados">
-  <h4>Cancelados</h4>
-    <Event/>
-  </Tab>
-</Tabs>
-
-
-
+            <Tab eventKey="Pendientes"  title="Pendientes">
+              <h4>Pendientes</h4>
+              <Event/>
+            </Tab>
+            <Tab eventKey="Pasados" title="Pasados">
+            <h4>Pasados</h4>
+              <Event/>
+            </Tab>
+            <Tab eventKey="Cancelados" title="Cancelados">
+            <h4>Cancelados</h4>
+              <Event/>
+            </Tab>
+          </Tabs>
+            {/* Mandamos a llamar al componente evento */}
             <Event />
           </Tab.Pane>
           <Tab.Pane eventKey="editProfile">
             <br/>
             <h2 className="title">Mis Datos</h2>
+            {/* Mandamos a llamar al componente editProfile */}
             <EditProfile />
           </Tab.Pane>
           <Tab.Pane eventKey="Follow">
             <br/>
             <h2>Siguiendo a...</h2>
+            {/* Mandamos a llamar dos veces al componente follows */}
             <Follows/> <Follows/>
           </Tab.Pane>
         </Tab.Content>

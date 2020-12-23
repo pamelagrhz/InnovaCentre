@@ -8,6 +8,7 @@ export default function NavBar() {
   return (
     <div>
       <Navbar bg="principal" expand="lg" className="fixed-top" variant="dark">
+        {/* LOGO DE INNOVACENTRE */}
         <Navbar.Brand href="/home">
           <img
             alt=""
@@ -25,15 +26,21 @@ export default function NavBar() {
           <Nav className="mr-auto ">
             <Nav.Link href="#link" disabled></Nav.Link>
           </Nav>
+
+
+          {/* INICIAR Y REGISTRARSE */}
           <a href="/signin" >Iniciar sesión/</a>
           <a href="/signout" >Registrarse</a>
+
+
+          {/* DROPDOWN */}
           <NavDropdown title="Signed in as: Mark Otto" id="basic-nav-dropdown">
+            {/* LISTA DE ELEMENTOS DEL MENU */}
             <NavDropdown.Item href="/perfil">Perfil</NavDropdown.Item>
             <NavDropdown.Item href="/event">Eventos</NavDropdown.Item>
             <NavDropdown.Item href="#action/3.3">Organizadores</NavDropdown.Item>
             <NavDropdown.Item href="/eventadd">agregar eventos</NavDropdown.Item>
             <NavDropdown.Item href="/cotizador">Cotizar</NavDropdown.Item>
-
             <NavDropdown.Divider />
             <NavDropdown.Item href="#action/3.4">Cerrar sesión</NavDropdown.Item>
           </NavDropdown>

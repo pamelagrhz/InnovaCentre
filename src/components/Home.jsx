@@ -42,11 +42,11 @@ export default function Home() {
             <div className="med-size">App de realidad aumentada
               <h6>A solo:</h6>
               <h4>$XX.XX MXN</h4>
-              <Button variant="warning" size="lg">Más Información</Button></div>
+              <Button variant="warning"  href="/RAapp"size="lg">Más Información</Button></div>
           </div>
         </div>
         <div class="bg-card bg-stars">
-          <div className="app1">
+          <div className="app2">
             <div className="med-size">Pagina web basica
               <h6>A solo:</h6>
               <h4>$XX.XX MXN</h4>
@@ -66,7 +66,7 @@ export default function Home() {
           </div>
         </div>
         <div class="bg-card bg-stars">
-          <div className="app1">
+          <div className="app2">
             <div className="med-size">Servicio de diseño gráfico
               <h6>A solo:</h6>
               <h4>$XX.XX MXN</h4>
@@ -87,7 +87,7 @@ export default function Home() {
           </div>
         </div>
         <div class="bg-card bg-stars">
-          <div className="app1">
+          <div className="app2">
             <div className="med-size">Marketing
               <h6>A solo:</h6>
               <h4>$XX.XX MXN</h4>
@@ -108,7 +108,7 @@ export default function Home() {
           </div>
         </div>
         <div class="bg-card bg-stars">
-          <div className="app1">
+          <div className="app2">
             <Stars></Stars>
             <div className="med-size">Publicidad
               <h6>A solo:</h6>
@@ -130,7 +130,7 @@ export default function Home() {
           </div>
         </div>
         <div class="bg-card bg-stars">
-          <div className="app1">
+          <div className="app2">
             <div className="med-size">Implementación de ecommerce
               <h6>A solo:</h6>
               <h4>$XX.XX MXN</h4>

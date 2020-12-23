@@ -15,12 +15,15 @@ const org ={
 var Following ="Siguiendo ";
   return (
     <div className='Following'>
-
+{/* Imagen del organizador */}
  <div className="small-round"><img src={Picture}  alt="" className='small-round'/></div>
  <div className='org'>
+   {/* Nombre */}
    <div className="follow-name">{org.name}</div>
+   {/* nombre de usuario, que redirige a su perfil */}
    <div className="follow-uname"><a href="#" className="">@{org.uname}</a> </div>
  </div>
+ {/* Boton que indica si se sigue o no al organizador */}
  <div><Button variant="success">{Following}<FontAwesomeIcon icon={faCheck} /><FontAwesomeIcon /></Button></div>
 </div>
   )
