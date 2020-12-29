@@ -1,11 +1,10 @@
-//import React, {Component} from 'react';
 import React from 'react';
-import '../Styles/cotizadorStyless.css';
+import '../../Styles/css/cotizadorStyless.css';
 import logo from '../../Assets/img/world.png';
 import axios from 'axios';
 import Recaptcha from 'react-recaptcha';
 import emailjs from 'emailjs-com';
-/* export default function CotizadorP(){ */
+
 export default class Cotizador extends React.Component{
     
 
@@ -14,7 +13,7 @@ export default class Cotizador extends React.Component{
         this.handleSubscribe = this.handleSubscribe.bind(this);
         this.recaptchaLoaded = this.recaptchaLoaded.bind(this);
         this.verifyCallback = this.verifyCallback.bind(this);
-        this.enviarFormulario = this.enviarFormulario.bind(this);
+        //this.enviarFormulario = this.enviarFormulario.bind(this);
        // this.onSubmit = this.onSubmit.bind(this);
         this.sendEmail = this.sendEmail.bind(this);
 
@@ -29,8 +28,6 @@ export default class Cotizador extends React.Component{
         }
     }
 
-    
-//http://preview.innovacentre.com.mx/apirest/servicios.php http://localhost/apirest/servicios.php
     componentDidMount() {
         axios.get(`http://preview.innovacentre.com.mx/apirest/servicios.php`)
           .then(res => {
@@ -41,13 +38,6 @@ export default class Cotizador extends React.Component{
           
       }
  
-    /* getProducto(id){
-        const res = axios.get('http://localhost/apirest/?id='+id);
-        this.setState(res.data.id_servicio);
-    }  */
-      
-
-
       sendEmail(e) {
         e.preventDefault();
     
@@ -71,24 +61,7 @@ export default class Cotizador extends React.Component{
             empresa: e.target.value
         })
     }
-/* 
-      onSubmit = async (e) => {
-        //e.preventDefault();
-        const res=await axios.post('http://localhost/apirest/sendEmail.php', {
-            //username: this.state.username
-            data:{
-                nombre: this.state.nombre,
-                empresa: this.state.empresa,
-                correo: this.state.correo,
-                telefono: this.state.telefono,
-                servicio: this.state.servicio
-            }
 
-        });
-        //console.log(res);
-        //this.setState({ nombre: '', empresa: '' });
-        //this.getUsers();
-    } */
 
     verifyCallback(response){
         if(response){
@@ -121,9 +94,7 @@ export default class Cotizador extends React.Component{
         });
     }
 
-    enviarFormulario(){
-        alert('Hola');
-    }
+    
 
 
     
@@ -134,37 +105,37 @@ export default class Cotizador extends React.Component{
         
                 <form /* onSubmit={this.sendEmail} */ onSubmit={this.handleSubscribe} className="bg-form-innova" id="">
     
-                    <div className="xyz bg-primary text-light py-3">
-                        <h3 class="">¡Bienvenido! <br/>A nuestro cotizador de servicios</h3>
+                    <div className="xyz bg-primary  py-3">
+                        <h3 className="">¡Bienvenido! <br/>A nuestro cotizador de servicios</h3>
                     </div>
                     <div className="py-3">
                         <img src={logo} className="responsiveImg" alt=""/>
                     </div>
     
-                    <div class="py-2">
-                        <div class="form-group row">
+                    <div className="py-2">
+                        <div className="form-group row">
                                
-                            <input type="text" class="form-control col-xl-4 col-lg-4 col-md-4 col-sm-10 col-10 offset-1 " placeholder="Nombre" name="nombre"  required onChange={event => this.valueToState(event.target)} 
+                            <input type="text" className="form-control col-xl-4 col-lg-4 col-md-4 col-sm-10 col-10 offset-1 " placeholder="Nombre" name="nombre"  required onChange={event => this.valueToState(event.target)} 
                             />
                            
-                            <input type="text" class="form-control col-xl-4 col-lg-4 col-md-4 col-sm-10 col-10 offset-1 offset-lg-2 offset-md-2" placeholder="Empresa" name="empresa" id="empresaV"
+                            <input type="text" className="form-control col-xl-4 col-lg-4 col-md-4 col-sm-10 col-10 offset-1 offset-lg-2 offset-md-2" placeholder="Empresa" name="empresa" id="empresaV"
                             required
                             onChange={event => this.valueToState(event.target)} 
                             />
                         </div>     
                         <div class="form-group row">
-                            <input type="email" class="form-control col-xl-4 col-lg-4 col-md-4 col-sm-10 col-10 offset-1" name="correo" id="correoV" placeholder="Correo" pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}" required
+                            <input type="email" className="form-control col-xl-4 col-lg-4 col-md-4 col-sm-10 col-10 offset-1" name="correo" id="correoV" placeholder="Correo" pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}" required
                             onChange={event => this.valueToState(event.target)} 
                             />
                         
-                            <input type="number" class="form-control col-xl-4 col-lg-4 col-md-4 col-sm-10 col-10 offset-1 offset-lg-2 offset-md-2" placeholder="Teléfono de contacto" name="telefono" id="numeroV" pattern="^(0|[1-9][0-9]*)$" required
+                            <input type="number" className="form-control col-xl-4 col-lg-4 col-md-4 col-sm-10 col-10 offset-1 offset-lg-2 offset-md-2" placeholder="Teléfono de contacto" name="telefono" id="numeroV" pattern="^(0|[1-9][0-9]*)$" required
                             onChange={event => this.valueToState(event.target)} 
                             />
                         </div>
                         
-                        <h4 class="py-3">Seleccione un servicio</h4>
+                        <h4 className="py-3">Seleccione un servicio</h4>
                                            
-                        <div class="form-group row">
+                        <div className="form-group row">
                             
                             <select className="form-control col-xl-4 col-lg-4 col-md-6 offset-md-3 col-sm-10 col-10 offset-1 offset-lg-4" name="servicio" onChange={event => this.valueToState(event.target)} 
                             >
@@ -177,21 +148,25 @@ export default class Cotizador extends React.Component{
                             
                         </div>             
 
-                        <div className="">
-                        <Recaptcha
-                            sitekey="6LfLe-UZAAAAAET_rtZONdi6JU-0C1n_GBjH9-og"
-                            render="explicit"
-                            onloadCallback={this.recaptchaLoaded}
-                            verifyCallback={this.verifyCallback}
-                        />
+                        <div className="col-xl-4 col-lg-4 col-md-6 offset-md-3 col-sm-10 col-10 offset-1 offset-lg-4">
+                                <div className="">
+
+                                <Recaptcha
+                                    sitekey="6LfLe-UZAAAAAET_rtZONdi6JU-0C1n_GBjH9-og"
+                                    render="explicit"
+                                    onloadCallback={this.recaptchaLoaded}
+                                    verifyCallback={this.verifyCallback}
+                                />
+
+                                </div>
 
                         </div>
+ 
     
                         <div class="py-3 form-group ">
                                 <input type="submit" value="Enviar" class="btn btn-success btn-lg"
                                 /* onClick={this.handleSubscribe} */
                                 />
-                                <input type="button" value="Cancelar" class="btn btn-danger btn-lg"/>
 
                         </div>
                         
