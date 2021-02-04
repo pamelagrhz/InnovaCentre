@@ -49,9 +49,9 @@
   height: auto;
 }
 
-a {
+/* a {
   color: #ffff !important;
-}
+} */
 
 .img {
   animation: ilustrationAnimate ease-in 1s infinite alternate;
