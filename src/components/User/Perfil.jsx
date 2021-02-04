@@ -1,75 +1,75 @@
 import React from 'react';
-import { Tab, Row, Col, Nav, Badge } from 'react-bootstrap';
+import { Tab,Tabs, Row, Col, Nav, Badge, Card, Form, Button } from 'react-bootstrap';
 
 import { ProSidebar } from 'react-pro-sidebar';
 import { Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
 import { Link } from 'react-router-dom';
 import Profile from '../../Assets/img/profile.jpeg'
-
+import UserMenu from '../StyleComponent/Menu'
+import EditProfile from './EditProfile'
+import Event from '../Events/Event'
+import Follows from '../User/Follows'
 import 'react-pro-sidebar/dist/css/styles.css';
 
 export default function Perfil() {
+  const user = {
+    name: "Mark",
+    lname: "Otto",
+    uname: "markOtto",
+    mail: "markotto@gmail.com",
+    bt: "5/9/99",
+    gendre: "M",
+    study: {
+      studing: "si",
+      level: "superior",
+      school: "ESIME"
+    }
+  }
   return (
     <div className='sign-in'>
-      <Tab.Container id="left-tabs-example" defaultActiveKey="first">
-        <Row>
-          <Col sm={3}>
-            <Nav variant="pills" className="flex-column">
-              <ProSidebar>
-                <Menu iconShape="square">
-                  <MenuItem disabled eventKey="first" className="center" > <img src={Profile} alt="" className="imgRedonda" /></MenuItem>
-                  <MenuItem disabled eventKey="first" ><h4>Mark Otto</h4></MenuItem>
 
-                  <MenuItem eventKey="first" >Mi perfil</MenuItem>
-                  <MenuItem eventKey="first" >Seguidos <Badge variant="primary">113</Badge>{' '}</MenuItem>
-                  <SubMenu title="Eventos" >
-                    <MenuItem>Pendientes <Badge variant="primary">56</Badge>{' '}</MenuItem>
-                    <MenuItem>Pasados<Badge variant="primary">7</Badge>{' '}</MenuItem>
-                    <MenuItem>Cancelados<Badge variant="primary">0</Badge>{' '}</MenuItem>
-                  </SubMenu>
-                  <MenuItem >A casa
-          <Link to="/home" /></MenuItem>
-                </Menu>
+      <Tab.Container id="left-tabs-example" defaultActiveKey="editProfile">
+          {/* Mandamos a llamar al componente userMenu */}
+        <UserMenu />
 
-              </ProSidebar>;
+        <Tab.Content>
+          <Tab.Pane eventKey="Events">
+            <h1>Mis eventos</h1>
 
-              <Nav.Item>
-                <Nav.Link eventKey="first" variant="light">Mis eventos</Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link eventKey="second" variant="light">Mi Perfil</Nav.Link>
-              </Nav.Item>
-            </Nav>
-          </Col>
-          <Col sm={9}>
-            <Tab.Content>
-              <Tab.Pane eventKey="first">
-                <div>pecaanfkwjrfnkjfna  1
-                    </div>
-              </Tab.Pane>
-              <Tab.Pane eventKey="second">
-                aliudnaisdnbslkhdbashdbalsjhdbashdbaliudnaisdnbslkhdbashdbalsjhdbashdbaliudnaisdnbslkhdbashdbalsjhdbashdb
-                aliudnaisdnbslkhdbashdbalsjhdbashdbaliudnaisdnbs
-                lkhdbashdbalsjhdbashdb
-                aliudnaisdnbslkhdbashdbalsjhdbashdbaliudnaisdnbslkhdbashdbalsjhdbashdbaliudnaisdnbslkhdbashdbalsjhdbashdb
-                aliudnaisdnbslkhdbashdbalsjhdbashdbaliudnaisdnbslkhdbashdbalsjhdbashdbaliudnaisdnbslkhdbashdbalsjhdbashdb
-                aliudnaisdnbslkh
-                dbashdbalsjhdbashdbaliudnaisdnbslkhdbashdbalsjhdbashdbaliudnaisdnbslkhdbashdbalsjhdbashdbaliudnaisdnbslkhd
-                bashdbalsjhdbashdbaliudnaisdnbslkhdbashdbals
-                jhdbashdbaliudnaisdnbslkhdbashdbalsjhdbashdbaliudnaisdnbslkhdbashdbalsjhdbashdbaliudnaisdnbslkhdbashdbals
-                jhdbashdbaliudnaisdnbslkhdbashdbalsjhdbashdbaliudn
-                aisdnbslkhdbashdbalsjhdbashdbaliudnaisdnbslkhdbashdbalsjhdbashdbaliudnaisdnbslkhdbashdbalsjhdbashdbaliudn
-                aisdnbslkhdbashdbalsjhdbashdb
-              </Tab.Pane>
-            </Tab.Content>
-          </Col>
-        </Row>
+            <Tabs defaultActiveKey="Pendientes"  class="black" id="uncontrolled-tab-example">
+            <Tab eventKey="Pendientes"  title="Pendientes">
+              <h4>Pendientes</h4>
+              <Event/>
+            </Tab>
+            <Tab eventKey="Pasados" title="Pasados">
+            <h4>Pasados</h4>
+              <Event/>
+            </Tab>
+            <Tab eventKey="Cancelados" title="Cancelados">
+            <h4>Cancelados</h4>
+              <Event/>
+            </Tab>
+          </Tabs>
+            {/* Mandamos a llamar al componente evento */}
+            <Event />
+          </Tab.Pane>
+          <Tab.Pane eventKey="editProfile">
+            <br/>
+            <h2 className="title">Mis Datos</h2>
+            {/* Mandamos a llamar al componente editProfile */}
+            <EditProfile />
+          </Tab.Pane>
+          <Tab.Pane eventKey="Follow">
+            <br/>
+            <h2>Siguiendo a...</h2>
+            {/* Mandamos a llamar dos veces al componente follows */}
+            <Follows/> <Follows/>
+          </Tab.Pane>
+        </Tab.Content>
       </Tab.Container>
 
 
-
-
-
+     
 
     </div >
   )

@@ -1,18 +1,10 @@
 import React, { useState } from 'react';
-import { Modal, Card, Row, Col, Image, Badge, Button, Nav, Form, FormControl, NavDropdown } from 'react-bootstrap';
+import { Navbar, Modal, Card, Row, Col, Badge, Button, Nav, Form, FormControl, NavDropdown, Tab, Tabs } from 'react-bootstrap';
 import Profile from '../../Assets/img/profile.jpeg'
-import Switch from '../Styles/Switch'
+import Switch from '../StyleComponent/Switch'
 
 export default function UsersList() {
-  const [value, setValue] = useState(false);
-  var toggler = document.querySelector('.toggle-switch');
-  // toggler.onclick = function () {
-  //   toggler.classList.toggle('active');
-  // }
-  const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-
+// Este es un ejemplo de una constante que es un objeto para poder mandar a llamar sus datos dentro de la plantilla
   const user = {
     name: "Mark",
     lname: "Otto",
@@ -24,155 +16,222 @@ export default function UsersList() {
       studing: "si",
       level: "superior",
       school: "ESIME"
+    },
+    permits: {
+      users: false,
+      events: true,
     }
   }
+
+// Esta seccion de codigo en JS nos permite mostrar y ocultar la ventana desplegable
+  const [value, setValue] = useState(false);
+  var toggler = document.querySelector('.toggle-switch');
+  // toggler.onclick = function () {
+  //   toggler.classList.toggle('active');
+  // }
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+
+
   return (
     <div>
-      <h1>Usuarios</h1>
-      {/* Nav */}
-      <>
-        <Nav className="justify-content-end" activeKey="/home">
-          <NavDropdown title="Filtrar por..." id="basic-nav-dropdown">
-            <NavDropdown.Item href="#action/3.1">Estudiantes</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.2">Gestor de servicios</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.3">Gestor de usuarios</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.4">Gestor de noticias</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.4">Gestor de eventos</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.4">Organizadores</NavDropdown.Item>
-          </NavDropdown>
-          <Form inline>
-            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-            <Button variant="outline-success">Search</Button>
-          </Form>
-        </Nav>
-      </>
-      {/* Usuarios */}
-      <Card className="leftcard mini-card user-list">
-        <Card.Img variant="top" src={Profile} className="imgRedonda center" />
-        <Card.Body>
-          <Card.Subtitle className="mb-2 text-muted">@{user.uname}</Card.Subtitle>
-          <Card.Title>{user.name} {user.lname}</Card.Title>
-          <Card.Subtitle className="mb-2 text-muted">{user.mail}</Card.Subtitle>
-          <Card.Text >
-            <p>Estudiante: {user.study.studing}</p>
-          </Card.Text>
-          <Card.Link className="linkButton" href="#" onClick={handleShow}>Ver más</Card.Link>
-          <Form>
-            {['checkbox'].map((type) => (
-              <div className="row center">
-                <Form.Check
-                  disabled checked
-                  type="radio"
-                  id=""
-                  label="N"
-                />
-
-                <Form.Check
-                  disabled
-                  type="radio"
-                  label="U"
-                  id=""
-                />
-                <Form.Check
-                  disabled checked
-                  type="radio"
-                  id=""
-                  label="E"
-                />
-              </div>
-            ))}
+      <br/>
+      <h2 className='title'>Gestión de usuarios</h2>
+      {/* Filtro */}
+      <Tabs defaultActiveKey="Estudiantes" className="black" transition={false} id="noanim-tab-example">
+        <Tab eventKey="Estudiantes" className="black" title="Estudiantes">
+        <>
+      <Navbar bg="light" variant="light">
+    <Navbar.Brand href="#home"></Navbar.Brand>
+    <Nav className="mr-auto">
+    </Nav>
+    <Form inline>
+      <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+      <Button variant="outline-primary">Search</Button>
+    </Form>
+  </Navbar>
+  </>
+          {/* Usuarios aqui se muestra la tarjeta del usuario  */}
+          <Card className="leftcard mini-card user-list">
             <div className="center">
-              <Switch
-                isOn={value}
-                handleToggle={() => setValue(!value)}
-              />
+              <Card.Img variant="top" src={Profile} className="imgRedonda center" />
             </div>
 
-          </Form>
-        </Card.Body>
-      </Card>
+            <Card.Body>
+              <Card.Subtitle className="mb-2 text-muted">@{user.uname}</Card.Subtitle>
+              <Card.Title>{user.name} {user.lname}</Card.Title>
+              <Card.Subtitle className="mb-2 text-muted">{user.mail}</Card.Subtitle>
+              <Card.Text >
+                <p>Estudiante: {user.study.studing}</p>
+              </Card.Text>
+              <Form>
+                {['checkbox'].map((type) => (
+                  <div className="row center">
+                    <Form.Check
+                      disabled checked
+                      type="checkbox"
+                      id="UsersPermits"
+                      label="Users"
+                    />
+
+                    <Form.Check
+                      disabled
+                      type="checkbox"
+                      label="Events"
+                      id="EventsPermits"
+                    />
+                    <Form.Check
+                      disabled checked
+                      type="checkbox"
+                      id="NewsPermits"
+                      label="News"
+                    />
+                  </div>
+                ))}
+              </Form>
+              <Button onClick={handleShow} href="">+</Button>
+            </Card.Body>
+          </Card>
+        </Tab>
+
+        {/* Titulado como profile dentro del filtro */}
+        <Tab eventKey="profile" title="Profile">
+        <>
+      <Navbar bg="light" variant="light">
+        <Navbar.Brand href="#home"></Navbar.Brand>
+        <Nav className="mr-auto">
+        </Nav>
+        <Form inline>
+          <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+          <Button variant="outline-primary">Search</Button>
+        </Form>
+      </Navbar>
+      </>
+          some
+        </Tab>
 
 
-      {/* Modelo a mostrar */}
+        {/* Titulado como Contact dentro del filtro */}
+        <Tab eventKey="contact" title="Contact">
+        <>
+      <Navbar bg="light" variant="light">
+        <Navbar.Brand href="#home"></Navbar.Brand>
+        <Nav className="mr-auto">
+        </Nav>
+        <Form inline>
+          <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+          <Button variant="outline-primary">Search</Button>
+        </Form>
+      </Navbar>
+      </>
+          some
+        </Tab>
+      </Tabs>
+
+
+
+
+      {/* Modelo a mostrar del usuario  */}
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>nombre evento</Modal.Title>
+          <Modal.Title>Datos del usuario @{user.uname}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
+          <div className="center">
+            <Card.Img variant="top" src={Profile} className="imgRedonda center" />
+          </div>
+          <div className="center">
+            <Card.Link>Resetear imagen</Card.Link>
+          </div>
           <Form>
+
+
             {/* Nombre */}
             <Form.Group as={Row} controlId="formPlaintextName">
               <Form.Label column sm="2">
-                Nombre
+                Nombre:
               </Form.Label>
               <Col sm="10">
                 <Form.Control plaintext readOnly defaultValue={user.name + " " + user.lname} />
               </Col>
             </Form.Group>
+
+
             {/* User */}
             <Form.Group as={Row} controlId="formPlaintextUser">
               <Form.Label column sm="2">
-                Usuario
+                Usuario:
               </Form.Label>
               <Col sm="10">
                 <Form.Control plaintext readOnly defaultValue={"@" + user.uname} />
               </Col>
             </Form.Group>
+
+
             {/* Birthday */}
             <Form.Group as={Row} controlId={"formPlaintextBirthday"}>
               <Form.Label column sm="2">
-                F.Nac.
+                F.Nac.:
               </Form.Label>
               <Col sm="10">
                 <Form.Control plaintext readOnly defaultValue={user.bt} />
               </Col>
             </Form.Group>
+
+
             {/* Email */}
             <Form.Group as={Row} controlId="formPlaintextEmail">
               <Form.Label column sm="2">
-                Email
+                Email:
               </Form.Label>
               <Col sm="10">
                 <Form.Control plaintext readOnly defaultValue={user.mail} />
               </Col>
             </Form.Group>
+
+
             {/* Genero */}
             <Form.Group as={Row} controlId="formPlaintextGendre">
               <Form.Label column sm="2">
-                Genero
+                Genero:
               </Form.Label>
               <Col sm="10">
                 <Form.Control plaintext readOnly defaultValue={user.gendre} />
               </Col>
             </Form.Group>
+
+
             {/* Servicios */}
-            <Form.Group as={Row} controlId="formServ">
-              <Form.Label column sm="5">
-                Gest Servicios
-              </Form.Label>
-              <Col sm="7">
-                <Form.Control plaintext readOnly defaultValue={Switch} />
-              </Col>
-            </Form.Group>
-            {/* Noticias */}
-            <Form.Group as={Row} controlId="formServ">
-              <Form.Label column sm="5">
-                Gest Noticias
-              </Form.Label>
-              <Col sm="7">
-                <Form.Control plaintext readOnly defaultValue={Switch} />
-              </Col>
-            </Form.Group>
-            {/* Eventps */}
-            <Form.Group as={Row} controlId="formServ">
-              <Form.Label column sm="5">
-                Gest Eventos
-              </Form.Label>
-              <Col sm="7">
-                <Form.Control plaintext readOnly defaultValue={Switch} />
-              </Col>
-            </Form.Group>
+            <h6>Permisos:</h6>
+            <Form>
+                {['checkbox'].map((type) => (
+                  <div className="row center">
+                    <Form.Check
+                      disabled checked
+                      type="checkbox"
+                      id="UsersPermits"
+                      label="Users"
+                    />
+
+                    <Form.Check
+                      disabled
+                      type="checkbox"
+                      label="Events"
+                      id="EventsPermits"
+                    />
+                    <Form.Check
+                      disabled checked
+                      type="checkbox"
+                      id="NewsPermits"
+                      label="News"
+                    />
+                  </div>
+                ))}
+              </Form>
             <a href="">Resetear passwd</a>
+            <div><a href="">Deshabilitar usuario</a></div>
           </Form>
         </Modal.Body>
         <Modal.Footer>
@@ -182,14 +241,7 @@ export default function UsersList() {
           </Button>
         </Modal.Footer>
       </Modal>
-
-
-
-
       <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-
-
-
       {/* <script type="text/javascript" src="jquery.min.js">
         $(document).readyState(function() {
           $(".ui-button .ui-click").click(function () {
