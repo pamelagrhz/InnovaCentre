@@ -19,14 +19,16 @@ import Blog from '../Assets/img/Blog.png'
 import Stars from './StyleComponent/Stars';
 import WebPage from '../Assets/img/wbpg.png'
 import Wave from './Wave/wave'
-// import Bolt from './StyleComponent/Bolt'
+import Toggle from './StyleComponent/Switch'
 export default function Home() {
   return (
     <div>
       <Stars></Stars>
       <Wave></Wave>
       <div className="color-ch ">
-        <h3>Entra a nuestro blog</h3>
+        <h3>Entra a nuestro blog
+          <Toggle/>
+        </h3>
         <p>Conoce más sobre noticias y nuestra comunidad. </p>
         <img src={Blog} alt="" className="blue-logo" />
         <div>
